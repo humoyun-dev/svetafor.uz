@@ -106,10 +106,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('POSTGRES_DB'),
-        'USER': os.getenv('POSTGRES_USER'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
-        'HOST': os.getenv('POSTGRES_HOST'),
+        'URL': 'postgres://default:P1OG7kxAUeuY@ep-winter-river-16363729-pooler.us-east-1.postgres.vercel-storage.com:5432/verceldb',
+        'NAME': 'verceldb',
+        'USER': 'default',
+        'PASSWORD': 'P1OG7kxAUeuY',
+        'HOST': 'ep-winter-river-16363729-pooler.us-east-1.postgres.vercel-storage.com',
         'PORT': os.getenv('POSTGRES_PORT'),
     }
 }

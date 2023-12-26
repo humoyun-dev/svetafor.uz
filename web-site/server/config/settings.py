@@ -111,7 +111,7 @@ DATABASES = {
         'USER': 'default',
         'PASSWORD': 'P1OG7kxAUeuY',
         'HOST': 'ep-winter-river-16363729-pooler.us-east-1.postgres.vercel-storage.com',
-        'PORT': os.getenv('POSTGRES_PORT'),
+        'PORT': '5432',
     }
 }
 

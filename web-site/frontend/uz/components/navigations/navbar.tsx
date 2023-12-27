@@ -2,11 +2,19 @@ import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import { useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
+import Auth from "@/components/auth/auth";
 
 const Navbar: React.FC = () => {
   const router = useRouter();
+
+  const token = useSelector((state: RootState) => state.user.token);
+
   return (
-    <div className={`border-b w-ful sticky top-0 z-[999] bg-white`}>
+    <div className={`border-b w-ful sticky top-0 z-50 bg-white`}>
       <div className={`w-10/12 mx-auto flex justify-between items-center`}>
         <div
           onClick={() => router.push("/")}
@@ -70,26 +78,51 @@ const Navbar: React.FC = () => {
           </div>
         </div>
         <div className={`lg:flex hidden gap-x-2`}>
-          <div
-            onClick={() => router.push("/cabinet/orders")}
-            className={`flex hover:bg-yellow-200 py-1 px-3 rounded duration-300 cursor-pointer items-center gap-1 `}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
+          {token.length ? (
+            <div
+              onClick={() => router.push("/cabinet/orders")}
+              className={`flex hover:bg-yellow-200 py-1 px-3 rounded duration-300 cursor-pointer items-center gap-1 `}
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-              />
-            </svg>
-            Kabinet
-          </div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                />
+              </svg>
+              Kabinet
+            </div>
+          ) : (
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button className={`hover:bg-yellow-200 bg-transparent`}>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                  Kirish
+                </Button>
+              </DialogTrigger>
+              <Auth />
+            </Dialog>
+          )}
 
           <Link
             href={"/wish-list"}

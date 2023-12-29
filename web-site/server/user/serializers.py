@@ -10,7 +10,7 @@ User = get_user_model()
 class CustomUserRegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['username', 'password', 'email', 'first_name', 'last_name', 'address', 'passport']
+        fields = ['username', 'password', 'email', 'first_name', 'last_name', 'address', 'passport', 'profile_image']
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
@@ -24,7 +24,7 @@ class CustomUserPasswordUpdateSerializer(serializers.Serializer):
 class CustomUserUpdateProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ['first_name', 'last_name', 'address', 'passport']
+        fields = ['first_name', 'last_name', 'address', 'passport', 'email', 'profile_image', 'username']
 
 class CustomUserProfileImageUpdateSerializer(serializers.ModelSerializer):
     class Meta:
@@ -36,7 +36,7 @@ class CustomUserDetailSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = CustomUser
-        fields = ['username', 'email', 'first_name', 'last_name', 'address', 'passport', 'orders']
+        fields = ['username', 'email', 'first_name', 'last_name', 'address', 'passport', 'orders', 'profile_image']
 
     def get_orders(self, obj):
         order = Order.objects.filter(user=obj)

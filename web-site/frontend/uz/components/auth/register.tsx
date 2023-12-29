@@ -3,8 +3,11 @@ import PhoneInput from "react-phone-input-2";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-
 import { AuthPostService } from "@/services/user/post-user.service";
+import { useDispatch } from "react-redux";
+import { setToken, setUserData } from "@/redux/reducers/user.reducer";
+import { useRouter } from "next/router";
+import { toast } from "react-toastify";
 
 const Register: React.FC = () => {
   const [phone, setPhone] = useState<string>("");
@@ -12,7 +15,8 @@ const Register: React.FC = () => {
   const [firstName, setFirstName] = useState<string>("");
   const [lastName, setLastName] = useState<string>("");
 
-  const [data, setData] = useState(null);
+  const dispatch = useDispatch();
+  const router = useRouter();
 
   const register = async () => {
     try {
@@ -22,11 +26,25 @@ const Register: React.FC = () => {
         first_name: firstName,
         last_name: lastName,
       });
-      setData(result);
+      dispatch(setUserData(result.user));
+      dispatch(setToken(result.token));
+      await router.push("/");
+      toast.success("Muvaffaqiyatli ro'yxatdan o'tdingiz", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     } catch (error: any) {
       console.error(error.message);
     }
   };
+
+  const valid = phone.length == 12 && firstName && lastName && password;
 
   return (
     <>
@@ -89,7 +107,7 @@ const Register: React.FC = () => {
             />
           </div>
         </div>
-        {phone && firstName && lastName && password ? (
+        {valid ? (
           <Button onClick={register} className={`mt-4 w-full`}>
             Kirish
           </Button>

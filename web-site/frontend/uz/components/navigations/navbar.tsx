@@ -1,21 +1,48 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import Auth from "@/components/auth/auth";
+import { setToken, setUserData } from "@/redux/reducers/user.reducer";
+import { getCookie } from "@/util/cookie";
 
 const Navbar: React.FC = () => {
   const router = useRouter();
 
+  const dispatch = useDispatch();
+
   const token = useSelector((state: RootState) => state.user.token);
+  const userData = useSelector((state: any) => state.user.userData);
+
+  useEffect(() => {
+    const savedToken = getCookie("token");
+    if (savedToken) {
+      dispatch(setToken(savedToken));
+    }
+  }, []);
+
+  useEffect(() => {
+    const savedUserData = localStorage.getItem("user-data");
+
+    if (savedUserData) {
+      try {
+        const parsedUserData = JSON.parse(savedUserData);
+        dispatch(setUserData(parsedUserData));
+      } catch (error) {
+        console.error("Error parsing user data:", error);
+      }
+    }
+  }, []);
 
   return (
     <div className={`border-b w-ful sticky top-0 z-50 bg-white`}>
-      <div className={`w-10/12 mx-auto flex justify-between items-center`}>
+      <div
+        className={`w-10/12 mx-auto flex flex-wrap justify-between items-center`}
+      >
         <div
           onClick={() => router.push("/")}
           className={`flex items-center gap-x-1 cursor-pointer`}
@@ -28,7 +55,7 @@ const Navbar: React.FC = () => {
             height={999}
           />
           <p className={`text-2xl text-green-600 font-bold uppercase`}>
-            Svetafor.uz
+            Svetaforuz
           </p>
         </div>
         <div className={`lg:flex hidden justify-between items-center gap-2`}>
@@ -80,7 +107,7 @@ const Navbar: React.FC = () => {
         <div className={`lg:flex hidden gap-x-2`}>
           {token.length ? (
             <div
-              onClick={() => router.push("/cabinet/orders")}
+              onClick={() => router.push("/cabinet")}
               className={`flex hover:bg-yellow-200 py-1 px-3 rounded duration-300 cursor-pointer items-center gap-1 `}
             >
               <svg

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { setCookie } from "@/util/cookie";
 
 const api = process.env.API_URL;
 
@@ -10,6 +11,8 @@ export const AuthPostService = {
           "Content-Type": "application/json",
         },
       });
+      setCookie("token", response.data.token, { expires: 30 });
+      localStorage.setItem("user-data", JSON.stringify(response.data.user));
 
       return response.data;
     } catch (error: any) {
@@ -24,6 +27,9 @@ export const AuthPostService = {
           "Content-Type": "application/json",
         },
       });
+
+      setCookie("token", response.data.token, { expires: 30 });
+      localStorage.setItem("user-data", JSON.stringify(response.data.user));
 
       return response.data;
     } catch (error: any) {

@@ -91,6 +91,7 @@ class CustomUserPasswordUpdateView(generics.UpdateAPIView):
 
         return Response({'detail': 'Password updated successfully.'}, status=status.HTTP_200_OK)
 
+
 class CustomUserUpdateProfileView(generics.UpdateAPIView):
     permission_classes = [IsAuthenticated]
     serializer_class = CustomUserUpdateProfileSerializer
@@ -106,7 +107,12 @@ class CustomUserUpdateProfileView(generics.UpdateAPIView):
         serializer.is_valid(raise_exception=True)
         self.perform_update(serializer)
 
-        return Response({'detail': 'Profile updated successfully.'}, status=status.HTTP_200_OK)
+        # Serialize the entire user object in the response
+        updated_user_serializer = CustomUserDetailSerializer(instance)
+        updated_user_data = updated_user_serializer.data
+
+        return Response({'detail': 'Profile updated successfully.', 'user': updated_user_data}, status=status.HTTP_200_OK)
+    
 
 class CustomUserProfileImageUpdateView(generics.UpdateAPIView):
     serializer_class = CustomUserProfileImageUpdateSerializer
@@ -122,7 +128,13 @@ class CustomUserProfileImageUpdateView(generics.UpdateAPIView):
         serializer.is_valid(raise_exception=True)
         self.perform_update(serializer)
 
-        return Response({'detail': 'Profile image updated successfully.'}, status=status.HTTP_200_OK)
+        # Serialize the entire user object in the response
+        updated_user_serializer = CustomUserDetailSerializer(instance)
+        updated_user_data = updated_user_serializer.data
+
+        return Response({'detail': 'Profile image updated successfully.', 'user': updated_user_data}, status=status.HTTP_200_OK)
+
+
 
 class CustomUserDetailView(RetrieveAPIView):
     serializer_class = CustomUserDetailSerializer

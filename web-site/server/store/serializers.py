@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product, ProductImage, CarType, Category
+from .models import *
 from comment.models import Comment
 from comment.serializer import CommentSerializer
 from django.db.models import Avg
@@ -134,3 +134,8 @@ class CategoryDetailSerializer(serializers.ModelSerializer):
 # Category api start
 #############################################################################################
 
+
+class PromoCodeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = PromoCode
+        fields = '__all__'

@@ -12,8 +12,9 @@ export interface ProductInterfaces {
   car_types: CarTypeInterfaces[];
   description: string;
   comments: CommentInterfaces[];
-  images: ImagesList;
+  images: ImagesList[];
   category: CategoryInterfaces;
+  video?: string | null;
 }
 
 interface ImagesList {

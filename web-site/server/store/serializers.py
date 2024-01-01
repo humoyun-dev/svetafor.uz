@@ -51,8 +51,8 @@ class ProductSerializer(serializers.ModelSerializer):
     def get_images(self, obj):
         first_image = obj.images.first()
         if first_image:
-            return ImageSerializer(first_image).data
-        return None
+            return [ImageSerializer(first_image).data]
+        return []
 
     def get_category(self, obj):
         category = obj.category
@@ -84,9 +84,9 @@ class ProductDetailSerializer(serializers.ModelSerializer):
                   'average_stars']
 
     def get_images(self, obj):
-        first_image = obj.images.first()
-        if first_image:
-            return ImageSerializer(first_image).data
+        images_queryset = obj.images.all()
+        if images_queryset.exists():
+            return ImageSerializer(images_queryset, many=True).data
         return None
 
     def get_category(self, obj):

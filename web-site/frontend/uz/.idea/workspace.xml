@@ -5,170 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="164c3e35-1b6d-45c9-94ed-bf18624f118e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/navigations/sidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/settings/update-image.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/settings/update-password.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/settings/update-profile.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/order/order-item.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interfaces/order/order.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/layout/layout-cabinet.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/cabinet/orders.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/cabinet/settings.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/store/cars/[slug].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/store/category/[slug].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/store/product/[slug].tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/util/cookie.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/comment/add-comment.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/comment/comments.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../server/conf/gunicorn.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/auth/register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/register.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/card/store-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/store-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigations/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigations/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigations/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigations/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/car-type/car-type.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/car-type/car-type.interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/category/category.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/category/category.interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/comment/comment.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/comment/comment.interfaces.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/product/product.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/product/product.interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interfaces/user/user.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/user/user.interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/cabinet/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cabinet/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/redux/reducers/user.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/user.reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/store/get-car-type.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/store/get-car-type.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/store/get-category.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/store/get-category.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/store/get-product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/store/get-product.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user/get-user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/user/get-user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user/post-user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/user/post-user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/user/put-user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/user/put-user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/.idea/server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/.idea/server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/config/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/config/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/config/wsgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/order/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/order/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/base.6be58084bde8.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/base.6be58084bde8.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/base.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/base.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/base.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/changelists.47cb433b29d4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/changelists.47cb433b29d4.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/changelists.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/changelists.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/changelists.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/changelists.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/dark_mode.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/dark_mode.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/dark_mode.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/dark_mode.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/dark_mode.e18e9a052429.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/dark_mode.e18e9a052429.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/dashboard.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/dashboard.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/dashboard.e90f2068217b.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/dashboard.e90f2068217b.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/forms.c731915b3b1e.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/forms.c731915b3b1e.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/forms.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/forms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/forms.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/forms.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/nav_sidebar.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/nav_sidebar.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/nav_sidebar.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/nav_sidebar.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/nav_sidebar.dd925738f4cc.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/nav_sidebar.dd925738f4cc.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/responsive.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/responsive.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/responsive.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/responsive.eafb93ff084c.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/responsive.eafb93ff084c.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/responsive_rtl.7d1130848605.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/responsive_rtl.7d1130848605.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/responsive_rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/responsive_rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/responsive_rtl.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/responsive_rtl.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/rtl.aa92d763340b.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/rtl.aa92d763340b.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/rtl.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/rtl.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/rtl.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/rtl.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/widgets.8a70ea6d8850.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/widgets.8a70ea6d8850.css.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/widgets.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/widgets.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/css/widgets.css.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/css/widgets.css.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/img/icon-hidelink.8d245a995e18.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/img/icon-hidelink.8d245a995e18.svg.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/img/icon-hidelink.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/img/icon-hidelink.svg.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/SelectBox.7d3ce5a98007.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/SelectBox.7d3ce5a98007.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/SelectBox.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/SelectBox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/SelectBox.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/SelectBox.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/SelectFilter2.b8cf7343ff9e.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/SelectFilter2.b8cf7343ff9e.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/SelectFilter2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/SelectFilter2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/SelectFilter2.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/SelectFilter2.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/actions.867b023a736d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/actions.867b023a736d.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/actions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/actions.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/actions.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/admin/DateTimeShortcuts.9f6e209cebca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/admin/DateTimeShortcuts.9f6e209cebca.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/admin/DateTimeShortcuts.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/admin/DateTimeShortcuts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/admin/DateTimeShortcuts.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/admin/DateTimeShortcuts.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/admin/RelatedObjectLookups.ef211845e458.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/admin/RelatedObjectLookups.ef211845e458.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/admin/RelatedObjectLookups.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/admin/RelatedObjectLookups.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/admin/RelatedObjectLookups.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/admin/RelatedObjectLookups.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/calendar.d64496bbf46d.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/calendar.d64496bbf46d.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/calendar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/calendar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/calendar.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/calendar.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/change_form.9d8ca4f96b75.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/change_form.9d8ca4f96b75.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/change_form.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/change_form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/change_form.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/change_form.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/core.7e257fdf56dc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/core.7e257fdf56dc.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/core.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/core.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/core.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/core.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/filters.0e360b7a9f80.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/filters.0e360b7a9f80.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/filters.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/filters.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/nav_sidebar.3b9190d420b1.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/nav_sidebar.3b9190d420b1.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/nav_sidebar.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/nav_sidebar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/nav_sidebar.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/nav_sidebar.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/theme.ab270f56bb9c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/theme.ab270f56bb9c.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/theme.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/theme.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/urlify.ae970a820212.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/urlify.ae970a820212.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/urlify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/urlify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/urlify.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/urlify.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.12e87d2f3a4c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.12e87d2f3a4c.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.min.2c872dbe60f4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.min.2c872dbe60f4.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.min.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/vendor/jquery/jquery.min.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/LICENSE.b6fd2ceea8d3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/LICENSE.b6fd2ceea8d3.txt.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/LICENSE.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/LICENSE.txt.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/LICENSE.txt.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.a7e08b0ce686.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.a7e08b0ce686.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.min.f1ae4617847c.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.min.f1ae4617847c.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.min.js.gz" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/admin/js/vendor/xregexp/xregexp.min.js.gz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/rest_framework/js/coreapi-0.1.1.8851fb9336c9.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/rest_framework/js/coreapi-0.1.1.8851fb9336c9.js.gz" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/static/staticfiles.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/static/staticfiles.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/user/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/user/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/user/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/store/product/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/product/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/comment/post-comment.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/comment/post-comment.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/gunicorn.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/store/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/serializers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -255,6 +104,9 @@
       <workItem from="1703691327767" duration="5799000" />
       <workItem from="1703706185193" duration="904000" />
       <workItem from="1703777949063" duration="16022000" />
+      <workItem from="1703869247055" duration="7255000" />
+      <workItem from="1703947480299" duration="5952000" />
+      <workItem from="1704094006341" duration="4000" />
     </task>
     <servers />
   </component>

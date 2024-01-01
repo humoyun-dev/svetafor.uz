@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3377221d-8e02-462e-a496-e940802f19a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/gunicorn.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/conf/gunicorn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/interfaces/product/product.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/interfaces/product/product.interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/pages/store/product/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/pages/store/product/[slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gunicorn.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/serializers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +54,7 @@
       <recent name="$PROJECT_DIR$/static" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/conf" />
       <recent name="$PROJECT_DIR$/static/admin" />
     </key>
   </component>
@@ -95,7 +101,8 @@
       <updated>1703853563162</updated>
       <workItem from="1703853564625" duration="1749000" />
       <workItem from="1703855529781" duration="5164000" />
-      <workItem from="1703862374835" duration="1094000" />
+      <workItem from="1703862374835" duration="4139000" />
+      <workItem from="1703871170661" duration="376000" />
     </task>
     <servers />
   </component>

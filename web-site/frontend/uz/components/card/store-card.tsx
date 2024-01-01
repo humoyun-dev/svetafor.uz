@@ -35,7 +35,7 @@ const StoreCard: React.FC<StoreCardProps> = ({ data }) => {
         <div className={`relative overflow-hidden p-2 rounded-lg bg-gray-100`}>
           <Image
             key={data.id}
-            src={`${process.env.API_URL}${data.images.image}`}
+            src={`${process.env.API_URL}${data.images[0].image}`}
             className={`rounded-lg md:h-[350px] h-[200px] group-hover:scale-110 object-cover duration-300`}
             alt={`image`}
             width={999}
@@ -77,7 +77,10 @@ const StoreCard: React.FC<StoreCardProps> = ({ data }) => {
             </div>
           </div>
           <span className={`bg-yellow-300 py-1 px-3 rounded-lg text-black`}>
-            95 000 UZS
+            {(data.price * 1).toLocaleString("en-US", {
+              style: "currency",
+              currency: "uzs",
+            })}
           </span>
         </div>
       </Link>

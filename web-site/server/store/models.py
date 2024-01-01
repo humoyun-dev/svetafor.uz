@@ -1,6 +1,9 @@
 from django.db import models
 from django.utils.text import slugify
 from django.utils import timezone
+from django_elasticsearch_dsl import Document, fields, Index
+from elasticsearch_dsl import analyzer
+
 
 
 class ProductSearch(models.Model):
@@ -76,6 +79,9 @@ class Product(models.Model):
     def save(self, *args, **kwargs):
         self.slug = generate_unique_slug(Product, self.name)
         super().save(*args, **kwargs)
+        # import ichida bo'lish kere teymalarin
+        from .documents import ProductDocument
+        ProductDocument().update(self)
 
     def __str__(self):
         return self.name

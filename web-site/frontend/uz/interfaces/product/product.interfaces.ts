@@ -15,9 +15,10 @@ export interface ProductInterfaces {
   images: ImagesList[];
   category: CategoryInterfaces;
   video?: string | null;
+  quantity: number;
 }
 
-interface ImagesList {
+export interface ImagesList {
   id: number;
   image: string;
   product: number;

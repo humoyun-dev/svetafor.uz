@@ -1,42 +1,19 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import Auth from "@/components/auth/auth";
-import { setToken, setUserData } from "@/redux/reducers/user.reducer";
-import { getCookie } from "@/util/cookie";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Cart from "@/components/drawer/cart";
 
 const Navbar: React.FC = () => {
   const router = useRouter();
-
-  const dispatch = useDispatch();
-
   const token = useSelector((state: RootState) => state.user.token);
-  const userData = useSelector((state: any) => state.user.userData);
-
-  useEffect(() => {
-    const savedToken = getCookie("token");
-    if (savedToken) {
-      dispatch(setToken(savedToken));
-    }
-  }, []);
-
-  useEffect(() => {
-    const savedUserData = localStorage.getItem("user-data");
-
-    if (savedUserData) {
-      try {
-        const parsedUserData = JSON.parse(savedUserData);
-        dispatch(setUserData(parsedUserData));
-      } catch (error) {
-        console.error("Error parsing user data:", error);
-      }
-    }
-  }, []);
+  const cart = useSelector((state: RootState) => state.cart.cartItems);
 
   return (
     <div className={`border-b w-ful sticky top-0 z-50 bg-white`}>
@@ -172,28 +149,35 @@ const Navbar: React.FC = () => {
             Saralangan
           </Link>
 
-          <div
-            className={`flex hover:bg-yellow-200 py-1 px-3 rounded duration-300 cursor-pointer items-center gap-x-1`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-              />
-            </svg>
-            Savat
-            <span className={`bg-green-200 ml-1 px-1.5 py-1 rounded`}>
-              {/*{totalItems}*/}0
-            </span>
-          </div>
+          <Sheet>
+            <SheetTrigger>
+              <div
+                className={`flex hover:bg-yellow-200 py-1 px-3 rounded duration-300 cursor-pointer items-center gap-x-1`}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                  />
+                </svg>
+                Savat
+                <span className={`bg-green-200 ml-1 px-1.5 py-1 rounded`}>
+                  {cart.length}
+                </span>
+              </div>
+            </SheetTrigger>
+            <SheetContent>
+              <Cart />
+            </SheetContent>
+          </Sheet>
         </div>
 
         <div className={`w-8 h-8 lg:hidden block mr-3`}>

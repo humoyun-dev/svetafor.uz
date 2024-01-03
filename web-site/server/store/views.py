@@ -68,6 +68,7 @@ class ProductSearchView(generics.ListAPIView):
         return product_search.search_products()
 
 class CouponViewSet(viewsets.ModelViewSet):
+    permission_classes = [AllowAny]
     queryset = PromoCode.objects.all()
     serializer_class = PromoCodeSerializer
 
@@ -76,11 +77,11 @@ class CouponViewSet(viewsets.ModelViewSet):
         try:
             coupon = PromoCode.objects.get(code=coupon_code)
         except PromoCode.DoesNotExist:
-            return Response({'message': 'Invalid coupon code'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'message': 'Invalid coupon code'}, status=status.HTTP_200_OK)
 
         if coupon.is_valid():
             # Apply the discount logic here (customize based on your needs)
             discount_amount = coupon.discount_percent
-            return Response({'message': 'Coupon applied successfully', 'discount_amount': discount_amount})
+            return Response({'message': 'Coupon applied successfully', 'discount_amount': discount_amount}, status=status.HTTP_201_CREATED)
         else:
-            return Response({'message': 'Expired coupon code'}, status=status.HTTP_400_BAD_REQUEST)
+            return Response({'message': 'Expired coupon code'}, status=status.HTTP_200_OK)

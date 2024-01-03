@@ -13,7 +13,7 @@ import {
 const Header: React.FC = () => {
   const router = useRouter();
   return (
-    <div className={`bg-yellow-200 py-1 w-full`}>
+    <div className={`bg-yellow-300 py-1 w-full`}>
       <div className={`w-10/12 mx-auto flex justify-between items-center`}>
         <div className={`flex justify-between items-center gap-3`}>
           <Link

@@ -1,13 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "@/redux/reducers/user.reducer";
+import CartReducer from "@/redux/reducers/cart.reducer";
+import WishListReducer from "@/redux/reducers/wish-list.reducer";
 
 export const store = configureStore({
   reducer: {
     user: userReducer,
+    cart: CartReducer,
+    wishList: WishListReducer,
   },
 });
 
-// Infer the `RootState` and `AppDispatch` types from the store itself
 export type RootState = ReturnType<typeof store.getState>;
-// Inferred type: {posts: PostsState, comments: CommentsState, users: UsersState}
 export type AppDispatch = typeof store.dispatch;

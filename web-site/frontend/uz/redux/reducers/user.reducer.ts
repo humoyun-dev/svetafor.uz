@@ -1,7 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { UserInterfaces } from "@/interfaces/user/user.interfaces";
 
 interface UserState {
-  userData: any[]; // Replace 'any' with a more specific type if possible
+  userData: UserInterfaces[];
   token: string;
 }
 

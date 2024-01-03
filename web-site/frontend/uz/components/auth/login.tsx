@@ -6,7 +6,7 @@ import PhoneInput from "react-phone-input-2";
 import { AuthPostService } from "@/services/user/post-user.service";
 import { setToken, setUserData } from "@/redux/reducers/user.reducer";
 import { toast } from "react-toastify";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
 const Login: React.FC = () => {

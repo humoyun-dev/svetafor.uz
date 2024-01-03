@@ -6,9 +6,16 @@ import Layout from "@/layout/layout";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Comments from "@/components/comment/comments";
+import { useDispatch, useSelector } from "react-redux";
+import { setCart } from "@/redux/reducers/cart.reducer";
+import { addToCartUtil } from "@/util/cart";
+import { RootState } from "@/redux/store";
+import { toast } from "react-toastify";
 
 const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product }) => {
   const [activeImg, setActiveImg] = useState(product.images[0]?.image || "");
+  const dispatch = useDispatch();
+  const cart = useSelector((state: RootState) => state.cart.cartItems);
 
   const handleThumbnailClick = (image: string) => {
     setActiveImg(image);
@@ -17,12 +24,23 @@ const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product }) => {
   const [rating, setRating] = useState<number>(5);
 
   useEffect(() => {
-    if (product.average_stars === null) {
-      setRating(5);
-    } else {
-      setRating(product.average_stars);
-    }
+    setRating(product.average_stars || 5);
   }, [product.average_stars]);
+  const addToCart = (item: ProductInterfaces) => {
+    const data = addToCartUtil(item, cart);
+    console.log(data);
+    dispatch(setCart(data));
+    toast.success("Muvaffaqiyatli savatga qo'shildi ", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
 
   return (
     <Layout>
@@ -149,7 +167,10 @@ const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product }) => {
                 />
               </svg>
             </button>
-            <Button className={`w-full`}>{`Savatchaga qo'shish`}</Button>
+            <Button
+              onClick={() => addToCart(product)}
+              className={`w-full`}
+            >{`Savatchaga qo'shish`}</Button>
           </div>
         </div>
       </div>

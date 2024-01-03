@@ -7,10 +7,21 @@ import Sidebar from "@/components/navigations/sidebar";
 import Footer from "@/components/navigations/footer";
 import { useSelector } from "react-redux";
 import { useRouter } from "next/router";
+import {
+  useSavedCartItems,
+  useSavedTokenEffect,
+  useSavedUserDataEffect,
+  useSavedWishItems,
+} from "@/util/loader";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const LayoutCabinet = ({ children }: { children: React.ReactNode }) => {
+  useSavedTokenEffect();
+  useSavedUserDataEffect();
+  useSavedCartItems();
+  useSavedWishItems();
+
   const token = useSelector((state: any) => state.user.token);
   const router = useRouter();
 

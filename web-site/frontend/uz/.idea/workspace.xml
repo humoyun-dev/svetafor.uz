@@ -5,19 +5,41 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="164c3e35-1b6d-45c9-94ed-bf18624f118e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/components/comment/add-comment.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/comment/comments.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../server/conf/gunicorn.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/image/image.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/navigations/tool-footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/ui/rating.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces/coupon/coupon.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/reducers/cart.reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redux/reducers/wish-list.reducer.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/search/coupon.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/cart.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/loader.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/util/wish-list.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../server/comment/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/auth/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/auth/login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/card/store-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/store-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/comment/add-comment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/comment/add-comment.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/drawer/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/drawer/cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigations/header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigations/header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigations/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigations/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigations/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigations/sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/interfaces/product/product.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/product/product.interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/layout-cabinet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout-cabinet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/store/product/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/product/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/wish-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wish-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/reducers/user.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/reducers/user.reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/services/comment/post-comment.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/comment/post-comment.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/gunicorn.conf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/comment/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/comment/serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/comment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/comment/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/config/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../server/store/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,9 +80,14 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.dev.executor&quot;: &quot;Run&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/home/humoyun-dev/Desktop/svetafor.uz/web-site/frontend/uz/node_modules/prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/home/humoyun-dev/Desktop/svetafor.uz/web-site/frontend/uz/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;TypeScript JSX&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -107,6 +134,13 @@
       <workItem from="1703869247055" duration="7255000" />
       <workItem from="1703947480299" duration="5952000" />
       <workItem from="1704094006341" duration="4000" />
+      <workItem from="1704096718036" duration="3417000" />
+      <workItem from="1704104063182" duration="15677000" />
+      <workItem from="1704212320764" duration="1612000" />
+      <workItem from="1704233773143" duration="699000" />
+      <workItem from="1704272716812" duration="16654000" />
+      <workItem from="1704290812047" duration="11073000" />
+      <workItem from="1704306420163" duration="320000" />
     </task>
     <servers />
   </component>

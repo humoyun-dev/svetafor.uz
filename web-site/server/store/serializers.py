@@ -100,7 +100,7 @@ class ProductDetailSerializer(serializers.ModelSerializer):
         return None
 
     def get_comments(self, obj):
-        comments = Comment.objects.filter(product=obj)
+        comments = Comment.objects.filter(product=obj).order_by('-date')
         comment_serializer = CommentSerializer(comments, many=True)
         return comment_serializer.data
 

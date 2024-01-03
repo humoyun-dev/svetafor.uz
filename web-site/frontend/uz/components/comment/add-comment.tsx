@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import { ProductInterfaces } from "@/interfaces/product/product.interfaces";
 import { Input } from "@/components/ui/input";
 import { useSelector } from "react-redux";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import Auth from "@/components/auth/auth";
+import { PostCommentService } from "@/services/comment/post-comment.service";
+import { toast } from "react-toastify";
+import { useRouter } from "next/router";
+import { CommentInterfaces } from "@/interfaces/comment/comment.interfaces";
 
 interface AddCommentProps {
   data: ProductInterfaces;
@@ -11,7 +17,10 @@ const AddComment: React.FC<AddCommentProps> = ({ data }) => {
   const [comment, setComment] = useState<string>("");
   const [rating, setRating] = useState<number>(5);
 
+  const router = useRouter();
+
   const userData = useSelector((state: any) => state.user.token);
+  const token = useSelector((state: any) => state.user.token);
 
   useEffect(() => {
     // Set initial rating to 5 if average_stars is null
@@ -27,8 +36,36 @@ const AddComment: React.FC<AddCommentProps> = ({ data }) => {
     const newRating = clickedIndex + 1 - (rating % 1 === 0.5 ? 0.5 : 0);
     setRating(newRating);
   };
+
+  const add = async () => {
+    try {
+      const result = await PostCommentService.AddComment(
+        {
+          text: comment,
+          stars: rating,
+          product: data.id,
+        },
+        token,
+      );
+
+      await router.replace(router.asPath);
+      toast.success("Muvaffaqiyatli Izoh qo'shildi", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    } catch (e: any) {
+      console.log(e);
+    }
+  };
+
   return (
-    <div>
+    <Dialog>
       <div className="mt-1">
         <div>
           {[...Array(5)].map((_, index) => (
@@ -51,7 +88,7 @@ const AddComment: React.FC<AddCommentProps> = ({ data }) => {
           />
           {userData ? (
             <button
-              // onClick={handleCommentSubmit}
+              onClick={() => add()}
               className={`right-0 top-0 bg-black h-full text-center text-white px-4 rounded-lg ${
                 comment ? "absolute" : "hidden"
               }`}
@@ -59,7 +96,7 @@ const AddComment: React.FC<AddCommentProps> = ({ data }) => {
               Yuborish
             </button>
           ) : (
-            <button
+            <DialogTrigger
               type="button"
               // onClick={() => router.push("/auth/login")}
               className={`right-0 top-0 bg-black h-full text-center text-white px-4 rounded-lg ${
@@ -67,11 +104,12 @@ const AddComment: React.FC<AddCommentProps> = ({ data }) => {
               }`}
             >
               Kirish
-            </button>
+            </DialogTrigger>
           )}
         </div>
       </div>
-    </div>
+      <Auth />
+    </Dialog>
   );
 };
 

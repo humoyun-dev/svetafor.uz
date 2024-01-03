@@ -1,8 +1,267 @@
-import React from "react";
+import React, { useState } from "react";
 import { NextPage } from "next";
+import Layout from "@/layout/layout";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/redux/store";
+import {
+  calculateSubTotalPrice,
+  calculateTotalPrice,
+  decrementQuantity,
+  incrementQuantity,
+  removeProduct,
+} from "@/util/cart";
+import { setCart } from "@/redux/reducers/cart.reducer";
+import Image from "next/image";
+import Rating from "@/components/ui/rating";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { toast } from "react-toastify";
+import { CouponService } from "@/services/search/coupon.service";
 
 const CartPage: NextPage = () => {
-  return <div></div>;
+  const dispatch = useDispatch();
+
+  const handleRemoveFromCart = (id: number) => {
+    const updatedCart = removeProduct(id, cart);
+    dispatch(setCart(updatedCart));
+  };
+
+  const cart = useSelector((state: RootState) => state.cart.cartItems);
+
+  const handleIncrement = (id: number) => {
+    const updatedCart = incrementQuantity(id, cart);
+    dispatch(setCart(updatedCart));
+  };
+  const handleDecrement = (id: number) => {
+    const updatedCart = decrementQuantity(id, cart);
+    dispatch(setCart(updatedCart));
+  };
+
+  const [error, setError] = useState(false);
+  const [coupon, setCoupon] = useState("");
+  const [per, setPer] = useState(0);
+
+  const search = async () => {
+    try {
+      const result = await CouponService.searchCoupon({
+        coupon_code: coupon,
+      });
+      if (result.status == 201) {
+        setPer(result.data.discount_amount);
+        setCoupon("");
+        toast.success("Active PromoCod", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setError(false);
+      } else {
+        setPer(0);
+        setCoupon("");
+        setError(result.data.message);
+        toast.error(`${result.data.message}`, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        setError(true);
+      }
+    } catch (e) {
+      setError(true);
+    }
+  };
+
+  const subtotal = calculateSubTotalPrice(cart);
+
+  const total = calculateTotalPrice(subtotal, per);
+
+  return (
+    <Layout>
+      <div
+        className={`flex flex-row justify-between items-start w-10/12 gap-x-4 mx-auto my-10`}
+      >
+        <div className={`w-1/2`}>
+          <h1 className={`text-xl underline underline-offset-8`}>
+            Savatdagi mahsulorlar ({cart.length})
+          </h1>
+          <ul className={`mt-4`}>
+            {cart.map((i) => (
+              <li key={i.id}>
+                <div className="h-[122px] w-full py-4 justify-start items-center gap-[15px] inline-flex">
+                  <div className="w-[90px] h-[90px] justify-center items-center flex">
+                    <Image
+                      className="w-[90px] object-cover h-[90px]"
+                      src={process.env.API_URL + i.images[0].image}
+                      alt={i.slug}
+                      width={999}
+                      height={999}
+                    />
+                  </div>
+                  <div className="flex w-10/12 items-center">
+                    <div className="grow shrink w-2/3 basis\-0 flex-col justify-start items-start gap-2 inline-flex">
+                      <p>{i.name}</p>
+                      <div>
+                        <Rating data={i} />
+                      </div>
+                    </div>
+                    <div className="justify-end items-center gap-6 flex">
+                      <div className="justify-start items-center gap-2 flex">
+                        <div
+                          className="w-6 h-6 relative cursor-pointer"
+                          onClick={() => handleDecrement(i.id)}
+                        >
+                          <svg
+                            fill="none"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M5 12h14"
+                            />
+                          </svg>
+                        </div>
+                        <div className="px-4 w-20 py-2 rounded border border-zinc-300 flex-col justify-center items-center gap-2 inline-flex">
+                          <div className="text-center text-black text-base font-medium font-['SF Pro Display'] leading-none">
+                            {i.quantity}
+                          </div>
+                        </div>
+                        <div
+                          className="w-6 h-6 relative cursor-pointer"
+                          onClick={() => handleIncrement(i.id)}
+                        >
+                          <svg
+                            fill="none"
+                            strokeWidth={1.5}
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              d="M12 4.5v15m7.5-7.5h-15"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div className={`flex flex-col items-center`}>
+                        <div className="text-black text-xl font-medium font-['SF Pro Display'] leading-loose tracking-wide">
+                          {(i.price * i.quantity).toLocaleString("en-US", {
+                            style: "currency",
+                            currency: "uzs",
+                          })}
+                        </div>
+                        <div className="text-black text-sm font-medium font-['SF Pro Display'] leading-loose tracking-wide">
+                          {(i.price * 1).toLocaleString("en-US", {
+                            style: "currency",
+                            currency: "uzs",
+                          })}
+                        </div>
+                      </div>
+                      <div
+                        className="w-6 h-6 relative cursor-pointer"
+                        onClick={() => handleRemoveFromCart(i.id)}
+                      >
+                        <svg
+                          fill="none"
+                          strokeWidth={1.5}
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                          className={`text-red-600`}
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            d="M6 18 18 6M6 6l12 12"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr className={`my-4`} />
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className={`w-1/2 px-16 py-4`}>
+          <div className={`border rounded-xl py-3 px-6`}>
+            <h2 className={`text-xl font-semibold mb-2`}>
+              Buyurtma Tafsilotlari
+            </h2>
+            <div>
+              <p className={`text-sm mb-2`}>Discount code / Promo code</p>
+              <div className={`relative flex items-center`}>
+                <Input
+                  value={coupon}
+                  onChange={(e) => setCoupon(e.target.value)}
+                  type={"text"}
+                  placeholder={`XXXXXXX`}
+                  className={`px-4 text-md ${
+                    error ? "border border-red-600" : ""
+                  }`}
+                />
+                {coupon.length ? (
+                  <Button onClick={search} className={`absolute right-0`}>
+                    Tekshirish
+                  </Button>
+                ) : (
+                  <Button disabled={true} className={`absolute right-0`}>
+                    Tekshirish
+                  </Button>
+                )}
+              </div>
+            </div>
+            <div className={`flex justify-between mt-5 text-lg`}>
+              <p className={`font-semibold`}>Oraliq jami:</p>
+              <p>
+                {subtotal.toLocaleString("en-US", {
+                  style: "currency",
+                  currency: "uzs",
+                })}
+              </p>
+            </div>
+            <hr className={`my-2`} />
+            <div className={`flex justify-between mt-2 text-lg`}>
+              <p className={`font-semibold`}>PromoCod:</p>
+              <p>{per}%</p>
+            </div>
+            <hr className={`my-2`} />
+            <div className={`flex justify-between mt-2 text-lg`}>
+              <p className={`font-semibold`}>Jami:</p>
+              <p>
+                {total.toLocaleString("en-US", {
+                  style: "currency",
+                  currency: "uzs",
+                })}
+              </p>
+            </div>
+            <div className={`mt-6`}>
+              <Button className={`w-full`}>Buyurtma berish</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  );
 };
 
 export default CartPage;

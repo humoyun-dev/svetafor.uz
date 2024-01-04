@@ -174,11 +174,11 @@ WSGI_APPLICATION = 'config.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'URL': env('DATABASE_URL'),
-        'NAME': env('DATABASE_NAME'),
-        'USER': env('DATABASE_USER'),
-        'PASSWORD': env('DATABASE_PASSWORD'),
-        'HOST': env('DATABASE_HOST'),
+        'URL': env('SVETAFOR_POSTGRES_URL'),
+        'NAME': env('SVETAFOR_POSTGRES_DATABASE'),
+        'USER': env('SVETAFOR_POSTGRES_USER'),
+        'PASSWORD': env('SVETAFOR_POSTGRES_PASSWORD'),
+        'HOST': env('SVETAFOR_POSTGRES_HOST'),
         'PORT': env('DATABASE_PORT'),
     }
 }

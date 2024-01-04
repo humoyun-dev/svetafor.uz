@@ -108,11 +108,11 @@ const Cart: React.FC = () => {
           Mening savatim
         </h5>
       </SheetTitle>
-      <div className={`mb-6 overflow-scroll`}>
+      <div className={`mb-6`}>
         <p className={`text-black text-lg border-b mb-4`}>
           {cart.length}ta mahsulot savatda bor
         </p>
-        <ul className={`flex h-[300px]  flex-col gap-y-4`}>
+        <ul className={`flex h-[300px] overflow-y-auto flex-col gap-y-4`}>
           {cart.map((product) => (
             <li className={`relative`} key={product.id}>
               <div className={`flex gap-x-2 justify-between border-b pb-3`}>

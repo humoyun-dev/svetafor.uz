@@ -10,7 +10,7 @@ const WishListPage: NextPage = () => {
 
   return (
     <Layout>
-      <div>
+      <div className={`min-h-screen`}>
         <div></div>
         <div className="grid grid-cols-4 gap-x-12 gap-y-10 w-10/12 mx-auto my-10">
           {wishlist.map((product) => (

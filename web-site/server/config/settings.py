@@ -228,6 +228,11 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_FILE_STORAGE = 'django.core.files.storage.FileSystemStorage'
 
+
+WHITENOISE_STATIC_PREFIX = '/static/'
+WHITENOISE_ROOT = os.path.join(BASE_DIR, 'static')
+WHITENOISE_EXCLUDE_EXTENSIONS = ('map',)
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 

@@ -43,7 +43,12 @@ const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product }) => {
   };
 
   return (
-    <Layout>
+    <Layout
+      title={"Svetaforuz"}
+      keyword={"svetaforuz, svetafor.uz, svetafor"}
+      img={product.images[0].image}
+      des={`${product.name}\n` + `${product.description}`}
+    >
       <div
         className={`flex md:w-10/12 w-11/12 mx-auto md:flex-row flex-col justify-between gap-x-2 items-start`}
       >

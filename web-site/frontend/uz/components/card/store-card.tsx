@@ -165,7 +165,12 @@ const StoreCard: React.FC<StoreCardProps> = ({ data }) => {
           </div>
           <div className="mb-1 border-b pb-2">
             <span className="mr-2">Katalog:</span>
-            <Badge onClick={() => router.push("")} className="bg-gray-200">
+            <Badge
+              onClick={() =>
+                router.push(`/store/category/${data.category.slug}`)
+              }
+              className="bg-gray-200"
+            >
               {data.category.name}
             </Badge>
           </div>
@@ -175,7 +180,7 @@ const StoreCard: React.FC<StoreCardProps> = ({ data }) => {
               {data.car_types.map((i) => (
                 <Badge
                   key={i.id}
-                  onClick={() => router.push("")}
+                  onClick={() => router.push(`/store/car/${i.slug}`)}
                   className="bg-gray-200"
                 >
                   {i.name}

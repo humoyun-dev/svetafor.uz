@@ -10,24 +10,57 @@ import {
   useSavedUserDataEffect,
   useSavedWishItems,
 } from "@/util/loader";
-import { Sheet } from "@/components/ui/sheet";
+import Head from "next/head";
 
 const inter = Inter({ subsets: ["latin"] });
 
-const Layout = ({ children }: { children: React.ReactNode }) => {
+const Layout: React.FC<LayoutInterface> = ({
+  children,
+  title,
+  des,
+  img,
+  keyword,
+}) => {
   useSavedTokenEffect();
   useSavedUserDataEffect();
   useSavedCartItems();
   useSavedWishItems();
   return (
-    <div className={`${inter.className}`}>
-      <Header />
-      <Navbar />
-      <ToastContainer />
-      {children}
-      <Footer />
-    </div>
+    <>
+      <Head>
+        <title>{title}</title>
+        <link rel={"icon"} href={"/logo.png"} />
+        {/* SEO */}
+        <meta name="description" content={`${des}`} />
+        <meta name="keywords" content={keyword} />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${title}`} />
+        <meta name="twitter:description" content={`${des}`} />
+        <meta name="twitter:image" content={`${img}`} />
+        <meta name="twitter:image:alt" content={`${title}`} />
+        {/*OG*/}
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={des} />
+        <meta property="og:image" content={img} />
+      </Head>
+      <div className={`${inter.className}`}>
+        <Header />
+        <Navbar />
+        <ToastContainer />
+        {children}
+        <Footer />
+      </div>
+    </>
   );
 };
 
 export default Layout;
+
+interface LayoutInterface {
+  children: React.ReactNode;
+  title: string;
+  des?: string;
+  img?: string;
+  keyword?: string;
+}

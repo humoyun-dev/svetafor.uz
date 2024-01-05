@@ -23,7 +23,19 @@ const CabinetPage = () => {
   }, [user]);
 
   return (
-    <LayoutCabinet>
+    <LayoutCabinet
+      title={"Svetaforuz"}
+      keyword={"svetaforuz, svetafor.uz, svetafor"}
+      img={"https://svetafor.uz/_next/image?url=%2Flogo.png&w=1080&q=75"}
+      des={
+        "Svetofor Uz\n" +
+        "Automotive Parts Store\n" +
+        "- Энг арзон авто аксессуарлар !\n" +
+        "- Доставка шахар бу́йлаб\n" +
+        "- L.E.D лампы в широком ассортименте.\n" +
+        "- Адресс: авторынок сергели 7/1 блок 8 магазин"
+      }
+    >
       <div className={`mb-5 w-full`}>
         <ol
           className="flex items-center whitespace-nowrap"

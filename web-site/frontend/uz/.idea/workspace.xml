@@ -5,13 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="164c3e35-1b6d-45c9-94ed-bf18624f118e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/pages/store/search/[q].tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/search/search.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/services/store/get-carousel.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/drawer/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/drawer/cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/store-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/store-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/drawer/category.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/drawer/category.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigations/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigations/navbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/car-type/list-car-type.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/category/category.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/category/category.interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/category/list-category.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/filtered-data.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/coupon/coupon.interface.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/product/list-product.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/product/list-product.interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/layout-cabinet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout-cabinet.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/layout/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/store/cars/[slug].tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/store/category/[slug].tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cabinet/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cabinet/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cabinet/orders.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cabinet/orders.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cabinet/settings.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cabinet/settings.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/car/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/car/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/car/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/car/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/cart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/category/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/category/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/category/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/faq.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/faq.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/store/product/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/product/[slug].tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/wish-list.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/wish-list.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/search/post-search.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/carousel/carousel.interface.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/store/get-car-type.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/store/get-car-type.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/store/get-category.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/store/get-category.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/store/get-product.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/store/get-product.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../server/config/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/config/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/store/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/store/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/store/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +97,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages/store" />
       <recent name="$PROJECT_DIR$/pages/cabinet" />
       <recent name="$PROJECT_DIR$/interfaces/category" />
       <recent name="$PROJECT_DIR$/interfaces/product" />
@@ -114,7 +148,9 @@
       <workItem from="1704290812047" duration="11073000" />
       <workItem from="1704306420163" duration="320000" />
       <workItem from="1704308388979" duration="1044000" />
-      <workItem from="1704387088054" duration="2053000" />
+      <workItem from="1704387088054" duration="18168000" />
+      <workItem from="1704467949753" duration="17000" />
+      <workItem from="1704467987867" duration="15075000" />
     </task>
     <servers />
   </component>

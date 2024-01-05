@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -9,11 +9,18 @@ import { Button } from "@/components/ui/button";
 import Auth from "@/components/auth/auth";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Cart from "@/components/drawer/cart";
+import { Input } from "@/components/ui/input";
+import CategoryDrawer from "@/components/drawer/category";
 
 const Navbar: React.FC = () => {
   const router = useRouter();
   const token = useSelector((state: RootState) => state.user.token);
   const cart = useSelector((state: RootState) => state.cart.cartItems);
+  const [search, setSearch] = useState<string>("");
+
+  const handlerSearch = async () => {
+    await router.push(`/store/search/${search}`);
+  };
 
   return (
     <div className={`border-b w-ful sticky top-0 z-50 bg-white`}>
@@ -36,49 +43,82 @@ const Navbar: React.FC = () => {
           </p>
         </div>
         <div className={`lg:flex hidden justify-between items-center gap-2`}>
-          <div
-            className={`bg-green-200 px-3 hover:bg-green-00 duration-200 cursor-pointer py-2 rounded flex gap-1`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6c0-.98.626-1.813 1.5-2.122"
-              />
-            </svg>
-            Katalog
-          </div>
-
-          <div className={`flex items-center`}>
-            <input
-              name={"search"}
-              className={`px-3 border py-2 focus:border-0 focus:ring-0 !rounded-l rounded-r-none !focus:ring-0 !focus:ring-offset-0 w-96`}
-              type={"search"}
-              placeholder={`Mahsulorlani izlash`}
-            />
-            <button className={`py-2 px-3 bg-yellow-200 rounded-r`}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
+          <Sheet>
+            <SheetTrigger>
+              <div
+                className={`bg-green-200 px-3 hover:bg-green-00 duration-200 cursor-pointer py-2 rounded flex gap-1`}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                />
-              </svg>
-            </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-6 h-6"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M6 6.878V6a2.25 2.25 0 012.25-2.25h7.5A2.25 2.25 0 0118 6v.878m-12 0c.235-.083.487-.128.75-.128h10.5c.263 0 .515.045.75.128m-12 0A2.25 2.25 0 004.5 9v.878m13.5-3A2.25 2.25 0 0119.5 9v.878m0 0a2.246 2.246 0 00-.75-.128H5.25c-.263 0-.515.045-.75.128m15 0A2.25 2.25 0 0121 12v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6c0-.98.626-1.813 1.5-2.122"
+                  />
+                </svg>
+                Katalog
+              </div>
+            </SheetTrigger>
+            <SheetContent side={"left"}>
+              <CategoryDrawer />
+            </SheetContent>
+          </Sheet>
+          <div className={`flex relative items-center`}>
+            <Input
+              placeholder={`Mahsulorlani qidiring`}
+              type={"search"}
+              onChange={(e) => setSearch(e.target.value)}
+              className={`pr-16 w-96`}
+            />
+            {search.length ? (
+              <Button
+                onClick={handlerSearch}
+                className={`absolute bg-green-300 hover:bg-green-400 right-0`}
+              >
+                <svg
+                  fill="none"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  className={`w-6 h-6`}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+              </Button>
+            ) : (
+              <Button
+                disabled={true}
+                className={`absolute bg-green-300 hover:bg-green-400 right-0`}
+              >
+                <svg
+                  fill="none"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  className={`w-6 h-6`}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+                  />
+                </svg>
+              </Button>
+            )}
           </div>
         </div>
         <div className={`lg:flex hidden gap-x-2`}>

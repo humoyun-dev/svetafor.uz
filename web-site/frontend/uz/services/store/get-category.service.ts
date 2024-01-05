@@ -10,7 +10,7 @@ export const GetCategoryService = {
   },
 
   async getOneCategory(slug: string) {
-    const { data } = await axios.get<CategoryInterfaces[]>(
+    const { data } = await axios.get<CategoryInterfaces>(
       `${process.env.API_URL}/store/categories/${slug}/`,
     );
     return data;

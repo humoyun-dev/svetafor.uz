@@ -5,4 +5,5 @@ export interface CategoryInterfaces {
   name: string;
   slug: string;
   products: ProductInterfaces[];
+  image: string;
 }

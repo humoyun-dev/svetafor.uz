@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-import os
 
 from environs import Env
 
@@ -28,7 +27,7 @@ SECRET_KEY = env.str("SECRET_KEY")
 
 DEBUG = env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = ['api.svetafor.uz',]
+ALLOWED_HOSTS = ['api.svetafor.uz','127.0.0.1']
 
 # Application definition
 
@@ -79,7 +78,7 @@ REST_FRAMEWORK = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://www.svetafor.uz/"
+    # "https://www.svetafor.uz/"
 ]
 
 CORS_ALLOW_CREDENTIALS = True

@@ -92,3 +92,11 @@ class ProductImage(models.Model):
 
     def image_url(self):
         return self.image.url
+
+
+class Carousel(models.Model):
+    image = models.ImageField(upload_to='images/')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
+    def image_url(self):
+        return self.image.url

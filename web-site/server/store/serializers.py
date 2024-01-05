@@ -139,3 +139,11 @@ class PromoCodeSerializer(serializers.ModelSerializer):
     class Meta:
         model = PromoCode
         fields = '__all__'
+
+
+class CarouselSerializer(serializers.ModelSerializer):
+    slug = serializers.ReadOnlyField(source='product.slug')
+
+    class Meta:
+        model = Carousel
+        fields = ('id', 'image', 'product', 'slug')

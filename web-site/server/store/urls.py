@@ -11,4 +11,5 @@ urlpatterns = [
     path('car-types/<slug:slug>/', CarTypeDetail.as_view(), name='car-type-detail'),
     path('search/', ProductSearchView.as_view(), name='search'),
     path('coupon/', CouponViewSet.as_view({'post': 'apply_coupon'}), name='apply_coupon'),
+    path('carousel/', CarouselViewSet.as_view({'get': 'list'}), name="carousel")
 ]

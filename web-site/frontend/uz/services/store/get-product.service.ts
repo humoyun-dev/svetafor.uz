@@ -1,9 +1,10 @@
 import axios from "axios";
 import { ListProductInterfaces } from "@/interfaces/product/list-product.interfaces";
+import { ProductInterfaces } from "@/interfaces/product/product.interfaces";
 
 export const GetProductService = {
   async getAllProducts() {
-    const { data } = await axios.get<ListProductInterfaces>(
+    const { data } = await axios.get<ProductInterfaces[]>(
       `${process.env.API_URL}/store/products/`,
     );
 

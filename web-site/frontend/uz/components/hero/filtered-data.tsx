@@ -4,6 +4,7 @@ import StoreCard from "@/components/card/store-card";
 import { ProductInterfaces } from "@/interfaces/product/product.interfaces";
 import { CarTypeInterfaces } from "@/interfaces/car-type/car-type.interfaces";
 import { CategoryInterfaces } from "@/interfaces/category/category.interfaces";
+import { Button } from "@/components/ui/button";
 
 const FilteredData: React.FC<FilteredDataInterface> = ({
   data,
@@ -35,8 +36,8 @@ const FilteredData: React.FC<FilteredDataInterface> = ({
   }, [categoryFilter, carFilter, data]);
 
   return (
-    <div className={`flex justify-between gap-x-4`}>
-      <div className={`w-3/12 `}>
+    <div className={`md:flex justify-between gap-x-4`}>
+      <div className={`w-3/12 hidden`}>
         <div className={`border rounded-xl h-full p-4 `}>
           <Tabs defaultValue={"category"} className={`w-full`}>
             <TabsList className={`w-full rounded-lg gap-x-2`}>
@@ -106,7 +107,29 @@ const FilteredData: React.FC<FilteredDataInterface> = ({
           </Tabs>
         </div>
       </div>
-      <div className={`w-9/12  grid grid-cols-4 gap-x-4 gap-y-10`}>
+      <div className={`mb-4`}>
+        <Button className={`text-2xl md:hidden space-x-2`}>
+          <svg
+            fill="none"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+            className={`w-8 h-8`}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75"
+            />
+          </svg>
+          <p>Filterlar</p>
+        </Button>
+      </div>
+      <div
+        className={`grid md:w-10/12 mx-auto md:grid-cols-5 grid-cols-2 gap-2 md:gap-x-4 md:gap-y-10`}
+      >
         {filteredData.map((i) => (
           <StoreCard data={i} key={i.id} />
         ))}

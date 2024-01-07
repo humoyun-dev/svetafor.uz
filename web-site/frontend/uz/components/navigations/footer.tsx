@@ -337,33 +337,33 @@ const Footer: React.FC = () => {
               Ijtimoiy tarmoqlarda ham kuzating
             </li>
             <li className={`flex text-center items-center gap-x-3`}>
-              {/*<Link*/}
-              {/*  href={"https://www.instagram.com/svetaforuz/"}*/}
-              {/*  target={"__blank"}*/}
-              {/*  className={`text-2xl text-gray-700 hover:text-red-400 duration-200`}*/}
-              {/*>*/}
-              {/*  <ion-icon name="logo-instagram"></ion-icon>*/}
-              {/*</Link>*/}
-              {/*<Link*/}
-              {/*  href={"/"}*/}
-              {/*  className={`text-2xl text-gray-700 hover:text-black duration-200`}*/}
-              {/*>*/}
-              {/*  <ion-icon name="logo-tiktok"></ion-icon>*/}
-              {/*</Link>*/}
-              {/*<Link*/}
-              {/*  href={"https://www.youtube.com/@svetaforuz/"}*/}
-              {/*  target={"__blank"}*/}
-              {/*  className={`text-2xl text-gray-700 hover:text-red-900 duration-200`}*/}
-              {/*>*/}
-              {/*  <ion-icon name="logo-youtube"></ion-icon>*/}
-              {/*</Link>*/}
-              {/*<Link*/}
-              {/*  href={"https://t.me/svetaforuz"}*/}
-              {/*  target={"__blank"}*/}
-              {/*  className={`text-2xl text-gray-700 hover:text-blue-500 duration-200`}*/}
-              {/*>*/}
-              {/*  <i className="bi bi-telegram"></i>*/}
-              {/*</Link>*/}
+              <Link
+                href={"https://www.instagram.com/svetaforuz/"}
+                target={"__blank"}
+                className={`text-2xl text-gray-700 hover:text-red-400 duration-200`}
+              >
+                <i className="bi bi-instagram"></i>
+              </Link>
+              <Link
+                href={"/"}
+                className={`text-2xl text-gray-700 hover:text-black duration-200`}
+              >
+                <i className="bi bi-tiktok"></i>
+              </Link>
+              <Link
+                href={"https://www.youtube.com/@svetaforuz/"}
+                target={"__blank"}
+                className={`text-3xl text-gray-700 hover:text-red-900 duration-200`}
+              >
+                <i className="bi bi-youtube"></i>
+              </Link>
+              <Link
+                href={"https://t.me/svetaforuz"}
+                target={"__blank"}
+                className={`text-2xl text-gray-700 hover:text-blue-500 duration-200`}
+              >
+                <i className="bi bi-telegram"></i>
+              </Link>
             </li>
           </ul>
         </div>

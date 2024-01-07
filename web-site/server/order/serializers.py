@@ -21,7 +21,7 @@ class OrderSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Order
-        fields = ['id', 'shipping_address', 'user', 'status', 'total_price', 'date_added', 'items', 'promo_code']
+        fields = ['id', 'shipping_address', 'phone_number', 'user', 'status', 'total_price', 'date_added', 'items', 'promo_code']
 
     def get_items(self, obj):
         products = OrderItem.objects.filter(order=obj)

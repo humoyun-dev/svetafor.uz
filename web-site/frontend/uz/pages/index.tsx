@@ -13,9 +13,10 @@ import { GetProductService } from "@/services/store/get-product.service";
 import { GetCategoryService } from "@/services/store/get-category.service";
 import { GetCarTypeService } from "@/services/store/get-car-type.service";
 import { GetCarouselService } from "@/services/store/get-carousel.service";
+import { ProductInterfaces } from "@/interfaces/product/product.interfaces";
 
 interface HomePageProps {
-  products: ListProductInterfaces;
+  products: ProductInterfaces[];
   carType: CarTypeInterfaces[];
   category: CategoryInterfaces[];
   carousel: CarouselInterface[];
@@ -42,7 +43,7 @@ const HomePage: NextPage<HomePageProps> = ({
         "- Адресс: авторынок сергели 7/1 блок 8 магазин"
       }
     >
-      <div className={`w-10/12 mx-auto my-2`}>
+      <div className={`md:w-10/12 w-11/12 mx-auto my-2`}>
         <AppCarousel data={carousel} />
       </div>
       <section className={`my-6`}>
@@ -54,7 +55,9 @@ const HomePage: NextPage<HomePageProps> = ({
             <div className="h-1 w-20 bg-yellow-500 rounded"></div>
           </div>
         </div>
-        <div className={`grid w-10/12 mx-auto grid-cols-5 gap-x-4 gap-y-10`}>
+        <div
+          className={`grid md:w-10/12 w-11/12 mx-auto md:grid-cols-5 grid-cols-2 gap-2 md:gap-x-4 md:gap-y-10`}
+        >
           {carType.slice(0, 10).map((i) => (
             <div
               onClick={() => router.push(`/store/car/${i.slug}`)}
@@ -88,7 +91,9 @@ const HomePage: NextPage<HomePageProps> = ({
             <div className="h-1 w-20 bg-yellow-500 rounded"></div>
           </div>
         </div>
-        <div className={`grid w-10/12 mx-auto grid-cols-5 gap-x-4 gap-y-10`}>
+        <div
+          className={`grid md:w-10/12 w-11/12 mx-auto md:grid-cols-5 grid-cols-2 gap-2 md:gap-x-4 md:gap-y-10`}
+        >
           {category.slice(0, 10).map((i) => (
             <div
               onClick={() => router.push(`/store/category/${i.slug}`)}
@@ -113,11 +118,11 @@ const HomePage: NextPage<HomePageProps> = ({
           ))}
         </div>
       </section>
-      <div>
+      <div className={`w-11/12 md:w-full mx-auto`}>
         <section className="text-gray-600 body-font">
-          <div className="px-5 py-24 mx-auto">
+          <div className="md:px-5 py-24 mx-auto">
             <div className="container flex flex-wrap w-full mb-10">
-              <div className="lg:w-1/2 w-full  lg:mb-0">
+              <div className="lg:w-1/2 w-full ">
                 <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
                   Barcha Mahsulotlar
                 </h1>
@@ -125,7 +130,7 @@ const HomePage: NextPage<HomePageProps> = ({
               </div>
             </div>
             <FilteredData
-              data={products.results}
+              data={products}
               carType={carType}
               category={category}
             />

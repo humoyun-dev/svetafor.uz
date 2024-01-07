@@ -10,7 +10,7 @@ import {
   incrementQuantity,
   removeProduct,
 } from "@/util/cart";
-import { setCart } from "@/redux/reducers/cart.reducer";
+import { setCart, setPromoCod } from "@/redux/reducers/cart.reducer";
 import Image from "next/image";
 import Rating from "@/components/ui/rating";
 import { Input } from "@/components/ui/input";
@@ -18,24 +18,28 @@ import { Button } from "@/components/ui/button";
 import { toast } from "react-toastify";
 import { CouponService } from "@/services/search/coupon.service";
 import { useRouter } from "next/router";
+import { state } from "sucrase/dist/types/parser/traverser/base";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import Auth from "@/components/auth/auth";
 
 const CartPage: NextPage = () => {
-  const router = useRouter();
   const dispatch = useDispatch();
+  const router = useRouter();
 
+  const userToken = useSelector((state: RootState) => state.user.token);
+
+  const cart = useSelector((state: RootState) => state.cart.cartItems);
   const handleRemoveFromCart = (id: number) => {
     const updatedCart = removeProduct(id, cart);
     dispatch(setCart(updatedCart));
   };
 
-  const cart = useSelector((state: RootState) => state.cart.cartItems);
-
-  const handleIncrement = (id: number) => {
-    const updatedCart = incrementQuantity(id, cart);
-    dispatch(setCart(updatedCart));
-  };
   const handleDecrement = (id: number) => {
     const updatedCart = decrementQuantity(id, cart);
+    dispatch(setCart(updatedCart));
+  };
+  const handleIncrement = (id: number) => {
+    const updatedCart = incrementQuantity(id, cart);
     dispatch(setCart(updatedCart));
   };
 
@@ -50,6 +54,7 @@ const CartPage: NextPage = () => {
       });
       if (result.status == 201) {
         setPer(result.data.discount_amount);
+        dispatch(setPromoCod(result.data.discount_amount));
         setCoupon("");
         toast.success("Active PromoCod", {
           position: "top-right",
@@ -304,7 +309,37 @@ const CartPage: NextPage = () => {
               </p>
             </div>
             <div className={`mt-6`}>
-              <Button className={`w-full`}>Buyurtma berish</Button>
+              {userToken ? (
+                <Button
+                  onClick={() => router.push(`/order/check`)}
+                  className={`w-full`}
+                >
+                  Buyurtma berish
+                </Button>
+              ) : (
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <Button className={`w-full`}>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={1.5}
+                        stroke="currentColor"
+                        className="w-6 h-6"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                        />
+                      </svg>
+                      Kirish
+                    </Button>
+                  </DialogTrigger>
+                  <Auth />
+                </Dialog>
+              )}
             </div>
           </div>
         </div>

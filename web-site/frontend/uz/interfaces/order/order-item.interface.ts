@@ -5,5 +5,5 @@ export interface OrderItemInterface {
   product: number;
   quantity: number;
   order: number;
-  product_data: ProductInterfaces;
+  product_data: ProductInterfaces[];
 }

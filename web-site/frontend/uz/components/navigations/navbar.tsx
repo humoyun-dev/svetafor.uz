@@ -25,7 +25,7 @@ const Navbar: React.FC = () => {
   return (
     <div className={`border-b w-ful sticky top-0 z-50 bg-white`}>
       <div
-        className={`w-10/12 mx-auto flex flex-wrap justify-between items-center`}
+        className={`md:w-10/12 w-11/12 mx-auto flex flex-wrap justify-between items-center`}
       >
         <div
           onClick={() => router.push("/")}

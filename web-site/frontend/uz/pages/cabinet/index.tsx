@@ -22,6 +22,15 @@ const CabinetPage = () => {
     );
   }, [user]);
 
+  if (!user) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
   return (
     <LayoutCabinet
       title={"Svetaforuz"}

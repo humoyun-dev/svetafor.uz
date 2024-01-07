@@ -30,7 +30,7 @@ const CustomDot = ({ onClick, ...rest }: any) => {
   return (
     <button
       className={`z-50 group-hover:mb-4 mx-1 -mb-4 duration-300 h-1.5 bg-white/70 rounded ${
-        active ? "bg-yellow-300 w-14" : "w-8"
+        active ? "bg-yellow-300 md:w-14 w-8" : "md:w-8 w-4"
       }`}
       onClick={() => onClick()}
     ></button>
@@ -47,7 +47,7 @@ const CustomLeftArrow = ({ onClick, ...rest }: any) => {
     <button
       onClick={() => onClick()}
       disabled={onMove || currentSlide === rest.totalItems - 1}
-      className={`z-40 group-hover:absolute text-white left-16 bg-black rounded-full w-12 h-12 flex items-center justify-center p-2`}
+      className={`z-40 group-hover:absolute text-white md:left-16 left-2 bg-black rounded-full md:w-12 md:h-12 w-10 h-10 flex items-center justify-center p-2`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
     <button
       onClick={() => onClick()}
       disabled={onMove || currentSlide === rest.totalItems - 1}
-      className={`z-40 group-hover:absolute text-white right-16 bg-black rounded-full w-12 h-12 flex items-center justify-center p-2`}
+      className={`z-40 group-hover:absolute text-white right-2 md:right-16 bg-black rounded-full w-10 h-10 md:w-12  md:h-12 flex items-center justify-center p-2`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -110,7 +110,7 @@ const AppCarousel: React.FC<AppCarouselProps> = ({ data }) => {
       showDots={true}
       ssr={true}
       responsive={responsive}
-      className={`h-[500px] group cursor-pointer rounded-xl`}
+      className={`md:h-[500px] group cursor-pointer rounded-xl`}
       arrows={true}
     >
       {data.map((i) => (

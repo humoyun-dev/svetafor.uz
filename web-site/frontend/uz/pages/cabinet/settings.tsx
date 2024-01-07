@@ -4,7 +4,20 @@ import Link from "next/link";
 import UpdateProfile from "@/components/settings/update-profile";
 import UpdateImage from "@/components/settings/update-image";
 import UpdatePassword from "@/components/settings/update-password";
-const Settings: React.FC = () => {
+import { UserInterfaces } from "@/interfaces/user/user.interfaces";
+import { useSelector } from "react-redux";
+const Settings = () => {
+  const user: UserInterfaces = useSelector((state: any) => state.user.userData);
+
+  if (!user) {
+    return {
+      redirect: {
+        destination: "/",
+        permanent: false,
+      },
+    };
+  }
+
   return (
     <LayoutCabinet
       title={"Svetaforuz"}

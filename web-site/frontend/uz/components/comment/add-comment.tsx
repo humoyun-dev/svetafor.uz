@@ -7,7 +7,7 @@ import Auth from "@/components/auth/auth";
 import { PostCommentService } from "@/services/comment/post-comment.service";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
-import { CommentInterfaces } from "@/interfaces/comment/comment.interfaces";
+import { Textarea } from "@/components/ui/textarea";
 
 interface AddCommentProps {
   data: ProductInterfaces;
@@ -36,6 +36,8 @@ const AddComment: React.FC<AddCommentProps> = ({ data }) => {
     const newRating = clickedIndex + 1 - (rating % 1 === 0.5 ? 0.5 : 0);
     setRating(newRating);
   };
+
+  console.log(rating);
 
   const add = async () => {
     try {
@@ -81,15 +83,15 @@ const AddComment: React.FC<AddCommentProps> = ({ data }) => {
           ))}
         </div>
         <div className="relative mt-1 duration-300">
-          <Input
+          <Textarea
             onChange={(e) => setComment(e.target.value)}
-            type="text" // Use double quotes consistently
             placeholder={`Izoh qoldiring`}
+            className={`pr-[110px]`}
           />
           {userData ? (
             <button
               onClick={() => add()}
-              className={`right-0 top-0 bg-black h-full text-center text-white px-4 rounded-lg ${
+              className={`right-0 bottom-0 bg-black py-2  text-center text-white px-4 rounded-lg ${
                 comment ? "absolute" : "hidden"
               }`}
             >

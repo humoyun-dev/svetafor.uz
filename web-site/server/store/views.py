@@ -12,17 +12,11 @@ from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 
 
-class CustomPageNumberPagination(PageNumberPagination):
-    page_size = 20  # Number of items per page
-    page_size_query_param = 'page_size'  # Custom query parameter to set page size
-    max_page_size = 100  # Maximum number of items per page
-
 
 class ProductList(generics.ListAPIView):
     permission_classes = [AllowAny]
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
-    pagination_class = CustomPageNumberPagination
 
 class ProductDetail(generics.RetrieveAPIView):
     queryset = Product.objects.all()

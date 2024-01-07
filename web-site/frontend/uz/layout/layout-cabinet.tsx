@@ -57,6 +57,12 @@ const LayoutCabinet: React.FC<LayoutInterface> = ({
         <meta property="og:title" content={title} />
         <meta property="og:description" content={des} />
         <meta property="og:image" content={img} />
+        <link
+          rel="stylesheet"
+          href={
+            "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          }
+        />
       </Head>
       <div className={`${inter.className}`}>
         <Header />

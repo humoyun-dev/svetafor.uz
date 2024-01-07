@@ -17,9 +17,12 @@ import Link from "next/link";
 import { CouponService } from "@/services/search/coupon.service";
 import { toast } from "react-toastify";
 import { Input } from "@/components/ui/input";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
+import Auth from "@/components/auth/auth";
 
 const Cart: React.FC = () => {
   const router = useRouter();
+  const userToken = useSelector((state: RootState) => state.user.token);
 
   const dispatch = useDispatch();
 
@@ -239,12 +242,39 @@ const Cart: React.FC = () => {
           </div>
         </div>
         <div className={`flex flex-col gap-2 items-center gap-y-4`}>
-          <Button
-            onClick={() => router.push("/cart")}
-            className={`w-full bg-yellow-300 py-2 rounded font-sans font-semibold hover:bg-yellow-200 duration-300 text-lg`}
-          >
-            Buyurtma berish
-          </Button>
+          {!userToken ? (
+            <Dialog>
+              <DialogTrigger asChild>
+                <Button
+                  className={`w-full bg-yellow-300 py-2 rounded font-sans font-semibold hover:bg-yellow-200 duration-300 text-lg`}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    />
+                  </svg>
+                  Kirish
+                </Button>
+              </DialogTrigger>
+              <Auth />
+            </Dialog>
+          ) : (
+            <Button
+              onClick={() => router.push(`/order/check`)}
+              className={`w-full bg-yellow-300 py-2 rounded font-sans font-semibold hover:bg-yellow-200 duration-300 text-lg`}
+            >
+              Buyurtma berish
+            </Button>
+          )}
 
           <Link
             href={`/cart`}

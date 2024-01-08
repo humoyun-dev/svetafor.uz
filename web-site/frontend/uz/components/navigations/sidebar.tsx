@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { removeCookie } from "@/util/cookie";
@@ -11,6 +11,7 @@ const Sidebar: React.FC = () => {
   const logout = async () => {
     removeCookie("token");
     dispatch(setToken(""));
+    // @ts-ignore
     dispatch(setUserData([]));
     localStorage.setItem("user-data", JSON.stringify([]));
     await router.push("/");

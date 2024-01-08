@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
@@ -10,15 +10,36 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import CategoryDrawer from "@/components/drawer/category";
 import Cart from "@/components/drawer/cart";
 import { Input } from "@/components/ui/input";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { removeCookie } from "@/util/cookie";
+import { setToken, setUserData } from "@/redux/reducers/user.reducer";
 
 const ToolFooter = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
+
   const token = useSelector((state: RootState) => state.user.token);
   const cart = useSelector((state: RootState) => state.cart.cartItems);
   const [search, setSearch] = useState<string>("");
 
   const handlerSearch = async () => {
     await router.push(`/store/search/${search}`);
+  };
+
+  const logout = async () => {
+    removeCookie("token");
+    dispatch(setToken(""));
+    // @ts-ignore
+    dispatch(setUserData([]));
+    localStorage.setItem("user-data", JSON.stringify([]));
+    await router.push("/");
   };
 
   return (
@@ -72,23 +93,43 @@ const ToolFooter = () => {
           </Sheet>
         </li>
         {token.length ? (
-          <li>
-            <Link href={"/cabinet"}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-8 h-8"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-                />
-              </svg>
-            </Link>
+          <li
+            className={`flex py-2 text-center justify-center  rounded duration-300 cursor-pointer items-center gap-1`}
+          >
+            <DropdownMenu>
+              <DropdownMenuTrigger>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-8 h-8"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                  />
+                </svg>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <DropdownMenuLabel>Mening Profilim</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem onClick={() => router.push("/cabinet")}>
+                  {`Shaxsiy ma'lumotlarim`}
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => router.push("/cabinet/settings")}
+                >{`Sozlamalar`}</DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => router.push("/cabinet/orders")}
+                >{`Buyurtmalarim`}</DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => logout()}
+                >{`Chiqish`}</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </li>
         ) : (
           <Dialog>

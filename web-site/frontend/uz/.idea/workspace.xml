@@ -6,18 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="164c3e35-1b6d-45c9-94ed-bf18624f118e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/hero/filtered-data.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/filtered-data.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigations/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigations/navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/navigations/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigations/sidebar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/navigations/tool-footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigations/tool-footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/order/order-items.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/order/order-items.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/layout/layout-cabinet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout-cabinet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/layout/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/layout/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/order/check.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/order/check.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/store/car/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/car/[slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/store/car/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/car/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/store/category/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/category/[slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/store/category/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/category/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,10 +120,23 @@
       <workItem from="1704574446458" duration="3687000" />
       <workItem from="1704618988225" duration="20145000" />
       <workItem from="1704651058833" duration="9192000" />
+      <workItem from="1704719882655" duration="6578000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/components/navigations/tool-footer.tsx</url>
+          <line>18</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

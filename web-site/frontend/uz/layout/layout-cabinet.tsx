@@ -70,7 +70,7 @@ const LayoutCabinet: React.FC<LayoutInterface> = ({
         <Navbar />
         <ToastContainer />
         <div
-          className={`md:w-10/12 w-11/12 mx-auto items-start flex md:flex-row flex-col gap-x-3 my-5`}
+          className={`md:w-10/12 w-11/12 mx-auto items-start md:flex md:flex-row flex-col gap-x-3 my-5 hidden`}
         >
           <div className={`sticky top-24 md:w-[20%]`}>
             <Sidebar />
@@ -82,6 +82,7 @@ const LayoutCabinet: React.FC<LayoutInterface> = ({
             {children}
           </div>
         </div>
+        <div className={`w-11/12 md:hidden mx-auto py-2`}>{children}</div>
         <ToolFooter />
         <Footer />
       </div>

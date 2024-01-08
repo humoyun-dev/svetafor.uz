@@ -37,7 +37,9 @@ const CheckPage = () => {
         "- Адресс: авторынок сергели 7/1 блок 8 магазин"
       }
     >
-      <div className={`w-6/12 mx-auto flex justify-between items-center py-4`}>
+      <div
+        className={`md:w-6/12 hidden mx-auto md:flex justify-between items-center py-4`}
+      >
         <div className={`flex text-green-500 items-center space-x-2`}>
           <svg
             fill="currentColor"
@@ -71,11 +73,13 @@ const CheckPage = () => {
           <p className={`text-xl font-bold`}>Buyurtma tugallandi</p>
         </div>
       </div>
-      <div className={`w-10/12 mx-auto my-4 flex justify-between gap-x-4`}>
-        <div className={`w-1/2 px-5`}>
+      <div
+        className={`md:w-10/12 mx-auto my-4 flex md:flex-row flex-col-reverse justify-between gap-x-4`}
+      >
+        <div className={`md:w-1/2 md:mt-0 mt-6 px-5`}>
           <ContactForms error={setErrorPost} success={setSuccess} />
         </div>
-        <div className={`w-1/2 px-5`}>
+        <div className={`md:w-1/2 px-5`}>
           <OrderItems />
         </div>
       </div>

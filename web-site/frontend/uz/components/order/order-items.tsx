@@ -116,7 +116,7 @@ const OrderItems = () => {
           <ul className={`mt-4`}>
             {cart.map((i) => (
               <li key={i.id}>
-                <div className="h-[122px] w-full py-4 justify-start items-center gap-[15px] inline-flex">
+                <div className="md:h-[122px] md:flex-row flex-col w-full py-4 justify-start items-center gap-[15px] inline-flex">
                   <div className="w-[90px] h-[90px] justify-center items-center flex">
                     <Image
                       className="w-[90px] object-cover h-[90px]"

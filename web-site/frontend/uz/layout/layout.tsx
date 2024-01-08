@@ -11,6 +11,7 @@ import {
   useSavedWishItems,
 } from "@/util/loader";
 import Head from "next/head";
+import ToolFooter from "@/components/navigations/tool-footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -53,6 +54,7 @@ const Layout: React.FC<LayoutInterface> = ({
         <Navbar />
         <ToastContainer />
         {children}
+        <ToolFooter />
         <Footer />
       </div>
     </>

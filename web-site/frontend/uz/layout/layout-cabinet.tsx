@@ -14,6 +14,7 @@ import {
   useSavedWishItems,
 } from "@/util/loader";
 import Head from "next/head";
+import ToolFooter from "@/components/navigations/tool-footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -68,8 +69,10 @@ const LayoutCabinet: React.FC<LayoutInterface> = ({
         <Header />
         <Navbar />
         <ToastContainer />
-        <div className={`w-10/12 mx-auto items-start flex  gap-x-3 my-5`}>
-          <div className={`sticky top-24`} style={{ width: "20%" }}>
+        <div
+          className={`md:w-10/12 w-11/12 mx-auto items-start flex md:flex-row flex-col gap-x-3 my-5`}
+        >
+          <div className={`sticky top-24 md:w-[20%]`}>
             <Sidebar />
           </div>
           <div
@@ -79,6 +82,7 @@ const LayoutCabinet: React.FC<LayoutInterface> = ({
             {children}
           </div>
         </div>
+        <ToolFooter />
         <Footer />
       </div>
     </>

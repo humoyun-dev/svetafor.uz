@@ -28,18 +28,20 @@ const CategoryDetailPage: NextPage<CategoryDetailPageInterface> = ({
       }
     >
       <div
-        className={`flex w-10/12 mx-auto items-center justify-between py-1 my-4`}
+        className={`flex md:w-10/12 w-11/12 md:flex-row flex-col mx-auto md:items-center space-y-2 justify-between py-1 my-4`}
       >
         <h1 className={`text-xl font-semibold underline underline-offset-4`}>
           {category.name}
         </h1>
         <Input
-          className={`w-96`}
+          className={`md:w-96`}
           onChange={(e) => setSearch(e.target.value)}
           placeholder={`Tezkor qidiruv`}
         />
       </div>
-      <div className={`grid w-10/12 mx-auto my-6 grid-cols-5 gap-x-4 gap-y-10`}>
+      <div
+        className={`grid md:w-10/12 w-11/12 mx-auto md:grid-cols-5 grid-cols-2 gap-2 md:gap-x-4 md:gap-y-10`}
+      >
         {category.products
           .filter((i) => {
             return search.toLowerCase() === ""

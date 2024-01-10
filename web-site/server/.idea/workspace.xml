@@ -5,36 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3377221d-8e02-462e-a496-e940802f19a0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../frontend/uz/components/image/image.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/uz/components/navigations/tool-footer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/uz/components/ui/rating.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/uz/interfaces/coupon/coupon.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/uz/redux/reducers/cart.reducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/uz/services/search/coupon.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/uz/util/cart.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/uz/util/loader.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/comment/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/components/auth/login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/components/auth/login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/components/card/store-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/components/card/store-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/components/comment/add-comment.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/components/comment/add-comment.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/components/drawer/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/components/drawer/cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/components/navigations/navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/components/navigations/navbar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/components/navigations/sidebar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/components/navigations/sidebar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/interfaces/product/product.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/interfaces/product/product.interfaces.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/layout/layout-cabinet.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/layout/layout-cabinet.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/layout/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/layout/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/pages/cart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/pages/cart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/pages/store/product/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/pages/store/product/[slug].tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/redux/reducers/user.reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/redux/reducers/user.reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/redux/store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/redux/store.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/services/comment/post-comment.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/services/comment/post-comment.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/uz/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../telegram-bot/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../telegram-bot/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../telegram-bot/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../telegram-bot/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../telegram-bot/client/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../telegram-bot/client/src/components/app/app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../telegram-bot/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../telegram-bot/client/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment/serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comment/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/comment/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/config/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/store/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -135,6 +110,7 @@
       <workItem from="1704289636181" duration="61000" />
       <workItem from="1704289745358" duration="80000" />
       <workItem from="1704290961315" duration="457000" />
+      <workItem from="1704734604149" duration="671000" />
     </task>
     <servers />
   </component>

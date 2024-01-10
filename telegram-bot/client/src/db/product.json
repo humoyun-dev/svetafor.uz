@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "h5000",
+    "slug": "h5000",
+    "inStock": true,
+    "category": {
+      "id": 1,
+      "name": "Diodlar",
+      "slug": "diodlar"
+    },
+    "price": 45000.0,
+    "images": [
+      {
+        "id": 1,
+        "image": "/media/store/product/images/Screenshot_from_2023-12-24_19-54-29.png",
+        "product": 1
+      }
+    ],
+    "carTypes": [
+      {
+        "id": 1,
+        "name": "Cobalt",
+        "slug": "cobalt",
+        "make": "Chevrolet",
+        "image": "http://127.0.0.1:8000/media/store/car-type/images/Screenshot_from_2023-12-24_17-11-13.png"
+      }
+    ],
+    "averageStars": 3.2
+  },
+  {
+    "id": 2,
+    "name": "h5000",
+    "slug": "h5000-2",
+    "inStock": true,
+    "category": {
+      "id": 1,
+      "name": "Diodlar",
+      "slug": "diodlar"
+    },
+    "price": 45000.0,
+    "images": [
+      {
+        "id": 4,
+        "image": "/media/store/product/images/ab67616d00001e028c7b5cc339ed184e109280cf.jpeg",
+        "product": 2
+      }
+    ],
+    "carTypes": [
+      {
+        "id": 1,
+        "name": "Cobalt",
+        "slug": "cobalt",
+        "make": "Chevrolet",
+        "image": "http://127.0.0.1:8000/media/store/car-type/images/Screenshot_from_2023-12-24_17-11-13.png"
+      },
+      {
+        "id": 2,
+        "name": "Damas",
+        "slug": "damas",
+        "make": "Chevrolet",
+        "image": "http://127.0.0.1:8000/media/store/car-type/images/Screenshot_from_2023-12-24_19-54-29.png"
+      }
+    ],
+    "averageStars": 3.5
+  }
+]

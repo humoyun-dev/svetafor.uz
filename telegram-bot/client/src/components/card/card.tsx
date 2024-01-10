@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductInterfaces } from "@/interfaces/product.interface.ts";
+// import { ProductInterfaces } from "@/interfaces/product.interface.ts";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import api from "@/api.json";
@@ -17,7 +17,7 @@ import {
 import { RootState } from "@/redux/store.ts";
 
 interface StoreCardProps {
-  data: ProductInterfaces;
+  data: any;
 }
 
 const StoreCard: React.FC<StoreCardProps> = ({ data }) => {

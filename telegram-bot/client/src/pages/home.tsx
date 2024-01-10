@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge.tsx";
-import { ProductService } from "@/service/products.service.ts";
-import { ProductInterfaces } from "@/interfaces/product.interface.ts";
+// import { ProductService } from "@/service/products.service.ts";
+// import { ProductInterfaces } from "@/interfaces/product.interface.ts";
 import { Button } from "@/components/ui/button.tsx";
-import Loading from "@/components/loading/loading.tsx";
+// import Loading from "@/components/loading/loading.tsx";
 import StoreCard from "@/components/card/card.tsx";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store.ts";
@@ -16,29 +16,29 @@ const Home = () => {
 
   const cart = useSelector((state: RootState) => state.cart.cartItems);
 
-  const [data, setData] = useState<ProductInterfaces[]>([]);
+  // const [data, setData] = useState<ProductInterfaces[]>([]);
   const [search, setSearch] = useState<string>("");
-  const [loading, setLoding] = useState<boolean>(false);
+  // const [loading, setLoding] = useState<boolean>(false);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      setLoding(true);
-      try {
-        const res = await ProductService.getAllProducts();
-        setData(res);
-        setLoding(false);
-      } catch (e) {
-        setLoding(false);
-        console.log(e);
-      }
-    };
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     setLoding(true);
+  //     try {
+  //       const res = await ProductService.getAllProducts();
+  //       setData(res);
+  //       setLoding(false);
+  //     } catch (e) {
+  //       setLoding(false);
+  //       console.log(e);
+  //     }
+  //   };
+  //
+  //   fetchData();
+  // }, []);
 
-    fetchData();
-  }, []);
-
-  if (loading) {
-    return <Loading />;
-  }
+  // if (loading) {
+  //   return <Loading />;
+  // }
 
   return (
     <div className={`mx-auto py-2`}>

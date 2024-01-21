@@ -11,7 +11,7 @@ const generateInlineKeyboard = () => {
         {
           text: "Open svetafor.uz",
           web_app: {
-            url: "https://telegram-web-bot.vercel.app",
+            url: "https://bot.svetafor.uz/",
           },
         },
       ],
@@ -35,7 +35,7 @@ const generateKeyboard = (userId) => {
             {
               text: "Do'kon",
               web_app: {
-                url: "https://telegram-web-bot.vercel.app",
+                url: "https://bot.svetafor.uz/",
               },
             },
           ]

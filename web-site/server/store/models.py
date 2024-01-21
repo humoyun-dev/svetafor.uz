@@ -5,7 +5,6 @@ from django_elasticsearch_dsl import Document, fields, Index
 from elasticsearch_dsl import analyzer
 
 
-
 class ProductSearch(models.Model):
     query = models.CharField(max_length=255)
 
@@ -92,7 +91,6 @@ class ProductImage(models.Model):
 
     def image_url(self):
         return self.image.url
-
 
 class Carousel(models.Model):
     image = models.ImageField(upload_to='images/')

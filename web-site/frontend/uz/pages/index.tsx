@@ -14,6 +14,7 @@ import { GetCategoryService } from "@/services/store/get-category.service";
 import { GetCarTypeService } from "@/services/store/get-car-type.service";
 import { GetCarouselService } from "@/services/store/get-carousel.service";
 import { ProductInterfaces } from "@/interfaces/product/product.interfaces";
+import CustomImage from "@/components/image/image";
 
 interface HomePageProps {
   products: ProductInterfaces[];
@@ -65,12 +66,10 @@ const HomePage: NextPage<HomePageProps> = ({
               key={i.id}
             >
               <div className={`overflow-hidden rounded-t-xl`}>
-                <Image
-                  className={`w-full h-[150px] object-cover duration-300 group-hover:scale-110`}
-                  src={i.image}
+                <CustomImage
+                  className={`w-full p-3 h-[150px] object-cover duration-300 group-hover:scale-110`}
+                  image={i.image}
                   alt={i.name}
-                  width={999}
-                  height={999}
                 />
               </div>
               <p
@@ -101,12 +100,10 @@ const HomePage: NextPage<HomePageProps> = ({
               key={i.id}
             >
               <div className={`overflow-hidden rounded-t-xl`}>
-                <Image
-                  className={`w-full h-[150px] object-cover duration-300 group-hover:scale-110`}
-                  src={i.image}
+                <CustomImage
+                  className={`w-full p-3 h-[150px] object-cover duration-300 group-hover:scale-110`}
+                  image={i.image}
                   alt={i.name}
-                  width={999}
-                  height={999}
                 />
               </div>
               <p

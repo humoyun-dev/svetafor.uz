@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="164c3e35-1b6d-45c9-94ed-bf18624f118e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../telegram-bot/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../telegram-bot/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../telegram-bot/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../telegram-bot/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../telegram-bot/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../telegram-bot/client/src/components/app/app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../../../telegram-bot/client/src/components/app/app.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../telegram-bot/client/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../telegram-bot/client/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../server/store/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/404.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/store-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/store-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/settings/update-image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/settings/update-image.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/store/product/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/product/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/store/search/[q].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/search/[q].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user/put-user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/user/put-user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +131,8 @@
       <workItem from="1704719882655" duration="6727000" />
       <workItem from="1704731166066" duration="6000" />
       <workItem from="1704742826994" duration="34000" />
+      <workItem from="1705825310127" duration="8484000" />
+      <workItem from="1705917694384" duration="907000" />
     </task>
     <servers />
   </component>

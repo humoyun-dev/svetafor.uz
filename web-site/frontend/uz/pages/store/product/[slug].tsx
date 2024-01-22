@@ -75,12 +75,12 @@ const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product }) => {
       des={`${product.name}\n` + `${product.description}`}
     >
       <div
-        className={`flex md:w-10/12 w-11/12 mx-auto md:flex-row flex-col justify-between gap-x-2 items-start`}
+        className={`flex md:w-10/12 w-11/12 mx-auto md:flex-row flex-col justify-between items-start`}
       >
         <div className={`md:w-7/12 md:sticky top-20 mx-auto w-full `}>
-          <div className="w-full flex mt-8 px-8 justify-between md:flex-row flex-col-reverse">
+          <div className="w-full flex mt-8  md:justify-between justify-center md:flex-row flex-col-reverse">
             <div
-              className={`flex md:flex-col flex-row mt-4 md:mt-0 md:gap-y-3 gap-x-3`}
+              className={`flex md:h-[530px] px-2 detail-image md:overflow-y-scroll overflow-x-scroll md:flex-col flex-row mt-4 md:mt-0 md:gap-y-3 gap-x-3`}
             >
               {product.images.map((image) => (
                 <ImageThumbnail

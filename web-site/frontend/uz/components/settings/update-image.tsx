@@ -9,43 +9,40 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 
 const UpdateImage: React.FC = () => {
-  const [image, setImage] = useState<string>("");
+  const [image, setImage] = useState<File | null>(null);
 
   const token = useSelector((state: any) => state.user.token);
   const dispatch = useDispatch();
-
   const router = useRouter();
 
-  const handleFileChange = (event: any) => {
-    setImage(event.target.files[0]);
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const selectedFile = event.target.files && event.target.files[0];
+    setImage(selectedFile);
   };
 
   const upload = async () => {
     try {
-      const result = await AuthPutService.UpdateProfileImage(
-        {
-          profile_image: image,
-        },
-        token,
-      );
+      if (!image) {
+        console.error("Please select a file.");
+        return;
+      }
+
+      const result = await AuthPutService.UpdateProfileImage(image, token);
+
+      console.log(result);
+
       dispatch(setUserData(result.user));
       await router.push("/cabinet");
       toast.success("Muvaffaqiyatli yuklandi", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
+        // ...toast options
       });
     } catch (error: any) {
-      console.error(error.message);
+      console.error("Error uploading image:", error.message);
+      toast.error("Error uploading image. Please try again.", {
+        // ...toast options
+      });
     }
   };
-
-  console.log(image);
 
   return (
     <>
@@ -60,20 +57,9 @@ const UpdateImage: React.FC = () => {
           onChange={handleFileChange}
         />
       </div>
-      {image ? (
-        <Button onClick={upload} className={`mt-3`}>
-          Rasmni yuklash
-        </Button>
-      ) : (
-        <Button
-          variant={"outline"}
-          disabled={true}
-          onClick={upload}
-          className={`mt-3`}
-        >
-          Rasmni yuklash
-        </Button>
-      )}
+      <Button onClick={upload} className={`mt-3`} disabled={!image}>
+        Rasmni yuklash
+      </Button>
     </>
   );
 };

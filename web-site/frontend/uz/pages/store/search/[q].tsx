@@ -65,7 +65,6 @@ const SearchDetail: NextPage<SearchDetailInterface> = ({
           </div>
         </div>
       )}
-      <div></div>
     </Layout>
   );
 };

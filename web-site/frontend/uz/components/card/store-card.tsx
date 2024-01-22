@@ -68,7 +68,7 @@ const StoreCard: React.FC<StoreCardProps> = ({ data }) => {
             onClick={() => router.push(`/store/product/${data.slug}`)}
             key={data.id}
             image={`${process.env.API_URL}${data.images[0].image}`}
-            className="rounded-lg md:h-[350px] h-[200px] group-hover:scale-110 object-cover duration-300"
+            className="rounded-lg md:h-[350px] p-10 h-[200px] group-hover:scale-110 object-cover duration-300"
             alt="image"
           />
           <Image

@@ -28,7 +28,8 @@ export const AuthPutService = {
   async UpdateProfileImage(file: any, token: any) {
     try {
       const formData = new FormData();
-      formData.append("file", file);
+      formData.append("profile_image", file);
+
       const response = await axios.patch(
         `${api}/user/update-profile-image/`,
         formData,
@@ -40,12 +41,13 @@ export const AuthPutService = {
         },
       );
 
-      localStorage.setItem("user-data", JSON.stringify(response.data.user));
-
-      return response.data;
+      if (response.status === 200) {
+        localStorage.setItem("user-data", JSON.stringify(response.data.user));
+        return response.data;
+      }
     } catch (error: any) {
-      console.log(error);
-      throw new Error(`Error submitting form: ${error.message}`);
+      console.error("Error updating profile image:", error);
+      throw new Error(`Error updating profile image: ${error.message}`);
     }
   },
 

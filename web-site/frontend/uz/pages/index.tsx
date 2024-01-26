@@ -14,7 +14,7 @@ import { GetCategoryService } from "@/services/store/get-category.service";
 import { GetCarTypeService } from "@/services/store/get-car-type.service";
 import { GetCarouselService } from "@/services/store/get-carousel.service";
 import { ProductInterfaces } from "@/interfaces/product/product.interfaces";
-import CustomImage from "@/components/image/image";
+import CustomImage from "@/components/media/image";
 
 interface HomePageProps {
   products: ProductInterfaces[];

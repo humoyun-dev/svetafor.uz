@@ -16,7 +16,7 @@ import {
 import { RootState } from "@/redux/store";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
-import CustomImage from "@/components/image/image";
+import CustomImage from "@/components/media/image";
 import Rating from "@/components/ui/rating";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";

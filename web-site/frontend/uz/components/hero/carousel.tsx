@@ -118,7 +118,7 @@ const AppCarousel: React.FC<AppCarouselProps> = ({ data }) => {
           onClick={() => router.push(`/store/product/${i.slug}`)}
           key={i.id}
           src={i.image}
-          alt={"/image"}
+          alt={"/media"}
           height={999}
           width={999}
           className={`w-full h-full object-cover`}

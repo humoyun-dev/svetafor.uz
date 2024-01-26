@@ -22,12 +22,15 @@ import {
   isInWishlist,
   removeFromWishlist,
 } from "@/util/wish-list";
+import { Badge } from "@/components/ui/badge";
+import Video from "@/components/media/video";
 
 const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product }) => {
   const [activeImg, setActiveImg] = useState(product.images[0]?.image || "");
   const dispatch = useDispatch();
   const cart = useSelector((state: RootState) => state.cart.cartItems);
   const wishlist = useSelector((state: RootState) => state.wishList.wishItems);
+  const [video, setVideo] = useState<boolean>(false);
 
   const handleThumbnailClick = (image: string) => {
     setActiveImg(image);
@@ -93,7 +96,7 @@ const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product }) => {
               ))}
             </div>
             <div
-              className={`md:w-2/3 md:h-[500px] h-[300px] lg:sticky top-20  rounded-md mx-auto w-full`}
+              className={`md:w-2/3 md:h-[500px] h-[300px] lg:sticky top-20 relative rounded-md mx-auto w-full`}
             >
               <Image
                 width={999}
@@ -102,6 +105,15 @@ const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product }) => {
                 alt="pro"
                 className={`w-full duration-300 lg:absolute p-6 h-full  border-2 border-black/60 object-contain rounded-md`}
               />
+              <div className={`absolute bottom-3 left-3 cursor-pointer`}>
+                {product.video ? (
+                  <Badge onClick={() => setVideo((video) => !video)}>
+                    Video
+                  </Badge>
+                ) : (
+                  <></>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -339,22 +351,11 @@ const ProductDetailPage: NextPage<ProductDetailPageProps> = ({ product }) => {
               )}
             </div>
           </div>
+          <Video setOpen={setVideo} open={video} video={product.video} />
         </div>
       </div>
 
       <hr className={`my-6`} />
-
-      {product.video ? (
-        <div className={`mt-8 w-10/12 mx-auto`}>
-          <video
-            controls={true}
-            className={`w-full h-[400px] md:h-[600px] p-4 bg-black cursor-pointer object-contain rounded-md border-2 border-black/60`}
-            src={product.video}
-          ></video>
-        </div>
-      ) : (
-        <div></div>
-      )}
       <div className={`w-10/12 mx-auto mt-8`}>
         <Comments product={product} />
       </div>

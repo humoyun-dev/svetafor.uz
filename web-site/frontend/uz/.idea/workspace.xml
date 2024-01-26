@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="164c3e35-1b6d-45c9-94ed-bf18624f118e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/nginx.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/media/video.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/card/store-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/card/store-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/hero/carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/hero/carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/image/image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/media/image.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/settings/update-image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/settings/update-image.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/interfaces/product/product.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/interfaces/product/product.interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/store/product/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/pages/store/product/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/user/put-user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/user/put-user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../server/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../server/store/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +132,9 @@
       <workItem from="1704742826994" duration="34000" />
       <workItem from="1705825310127" duration="8484000" />
       <workItem from="1705917694384" duration="1198000" />
-      <workItem from="1705920919303" duration="319000" />
+      <workItem from="1705920919303" duration="776000" />
+      <workItem from="1705950031115" duration="1378000" />
+      <workItem from="1706160662564" duration="4001000" />
     </task>
     <servers />
   </component>

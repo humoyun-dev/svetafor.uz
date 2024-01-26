@@ -37,8 +37,8 @@ const UpdateImage: React.FC = () => {
         // ...toast options
       });
     } catch (error: any) {
-      console.error("Error uploading image:", error.message);
-      toast.error("Error uploading image. Please try again.", {
+      console.error("Error uploading media:", error.message);
+      toast.error("Error uploading media. Please try again.", {
         // ...toast options
       });
     }

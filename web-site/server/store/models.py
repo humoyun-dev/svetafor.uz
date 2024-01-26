@@ -1,9 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
 from django.utils import timezone
-from django_elasticsearch_dsl import Document, fields, Index
-from elasticsearch_dsl import analyzer
-
 
 class ProductSearch(models.Model):
     query = models.CharField(max_length=255)
@@ -74,6 +71,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     car_types = models.ManyToManyField(CarType, blank=True)
     in_stock = models.BooleanField(default=True, blank=True)
+    video = models.FileField(upload_to='store/product/videos', blank=True, null=True)
 
     def save(self, *args, **kwargs):
         self.slug = generate_unique_slug(Product, self.name)

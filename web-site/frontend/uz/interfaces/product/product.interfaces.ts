@@ -14,7 +14,7 @@ export interface ProductInterfaces {
   comments: CommentInterfaces[];
   images: ImagesList[];
   category: CategoryInterfaces;
-  video?: string | null;
+  video: string;
   quantity: number;
 }
 

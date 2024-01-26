@@ -46,7 +46,7 @@ export const AuthPutService = {
         return response.data;
       }
     } catch (error: any) {
-      console.error("Error updating profile image:", error);
+      console.error("Error updating profile media:", error);
       throw new Error(`Error updating profile image: ${error.message}`);
     }
   },

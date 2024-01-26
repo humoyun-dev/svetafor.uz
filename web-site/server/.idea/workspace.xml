@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3377221d-8e02-462e-a496-e940802f19a0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../../telegram-bot/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../../telegram-bot/server/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/uz/components/media/video.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/components/card/store-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/components/card/store-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/components/hero/carousel.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/components/hero/carousel.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/components/image/image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/components/media/image.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/components/settings/update-image.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/components/settings/update-image.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/interfaces/product/product.interfaces.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/interfaces/product/product.interfaces.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/pages/store/product/[slug].tsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/pages/store/product/[slug].tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/uz/services/user/put-user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/uz/services/user/put-user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/store/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/store/serializers.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,6 +119,9 @@
       <workItem from="1704290961315" duration="457000" />
       <workItem from="1704734604149" duration="671000" />
       <workItem from="1705071772526" duration="15000" />
+      <workItem from="1705950091244" duration="111000" />
+      <workItem from="1705992762043" duration="56000" />
+      <workItem from="1706165422376" duration="1136000" />
     </task>
     <servers />
   </component>

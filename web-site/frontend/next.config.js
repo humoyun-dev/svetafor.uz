@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
   env: {
-    API_URL: "https://svetaforuz-production.up.railway.app",
+    API_URL: "https://api.svetafor.uz",
     // API_URL: "http://127.0.0.1:8000",
   },
   images: {

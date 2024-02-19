@@ -95,8 +95,6 @@ CORS_ALLOW_METHODS = [
     'PUT',
 ]
 
-
-
 CORS_ALLOW_HEADERS = [
     'accept',
     'accept-encoding',
@@ -110,7 +108,6 @@ CORS_ALLOW_HEADERS = [
 ]
 
 # elasticsearch settings
-
 
 ELASTICSEARCH_DSL = {
     'default': {

@@ -77,8 +77,8 @@ class Product(models.Model):
         self.slug = generate_unique_slug(Product, self.name)
         super().save(*args, **kwargs)
         # import ichida bo'lish kere teymalarin
-        from .documents import ProductDocument
-        ProductDocument().update(self)
+        # from .documents import ProductDocument
+        # ProductDocument().update(self)
 
     def __str__(self):
         return self.name

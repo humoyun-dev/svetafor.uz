@@ -109,35 +109,35 @@ CORS_ALLOW_HEADERS = [
 
 # elasticsearch settings
 
-ELASTICSEARCH_DSL = {
-    'default': {
-        'hosts': [{
-            'host': 'localhost',
-            'port': 9200,
-            'scheme': 'http',
-        }],
-    },
-}
+# ELASTICSEARCH_DSL = {
+#     'default': {
+#         'hosts': [{
+#             'host': 'localhost',
+#             'port': 9200,
+#             'scheme': 'http',
+#         }],
+#     },
+# }
 
 
-ELASTICSEARCH_DSL_INDEX_SETTINGS = {
-    'number_of_shards': 1,
-    'number_of_replicas': 0,
-}
+# ELASTICSEARCH_DSL_INDEX_SETTINGS = {
+#     'number_of_shards': 1,
+#     'number_of_replicas': 0,
+# }
 
-ELASTICSEARCH_DSL_INDEX_SETTINGS_DEFAULT = {
-    'name': 'default',
-    'body': {
-        'settings': {
-            'number_of_shards': 1,
-            'number_of_replicas': 0,
-        },
-    },
-}
+# ELASTICSEARCH_DSL_INDEX_SETTINGS_DEFAULT = {
+#     'name': 'default',
+#     'body': {
+#         'settings': {
+#             'number_of_shards': 1,
+#             'number_of_replicas': 0,
+#         },
+#     },
+# }
 
-ELASTICSEARCH_INDEX_NAMES = {
-    'store.documents.ProductDocument': 'product_index',
-}
+# ELASTICSEARCH_INDEX_NAMES = {
+#     'store.documents.ProductDocument': 'product_index',
+# }
 
 
 ROOT_URLCONF = 'config.urls'

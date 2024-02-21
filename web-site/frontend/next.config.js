@@ -6,7 +6,7 @@ const nextConfig = {
     // API_URL: "http://127.0.0.1:8000",
   },
   images: {
-    domains: ["127.0.0.1"],
+    domains: ["127.0.0.1", "svetaforuz-production.up.railway.app"],
   },
 };
 

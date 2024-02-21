@@ -4,7 +4,6 @@ import { GetServerSideProps, NextPage } from "next";
 import { CarTypeInterfaces } from "@/interfaces/car-type/car-type.interfaces";
 import { CategoryInterfaces } from "@/interfaces/category/category.interfaces";
 import FilteredData from "@/components/hero/filtered-data";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { CarouselInterface } from "@/interfaces/carousel/carousel.interface";
 import AppCarousel from "@/components/hero/carousel";
